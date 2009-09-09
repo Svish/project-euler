@@ -1,0 +1,5 @@
+E:\Development\Windows\Project Euler\Problems\bin\Debug\Problems.dll
+E:\Development\Windows\Project Euler\Problems\bin\Debug\Problems.pdb
+E:\Development\Windows\Project Euler\Problems\obj\Debug\ResolveAssemblyReference.cache
+E:\Development\Windows\Project Euler\Problems\obj\Debug\Problems.dll
+E:\Development\Windows\Project Euler\Problems\obj\Debug\Problems.pdb

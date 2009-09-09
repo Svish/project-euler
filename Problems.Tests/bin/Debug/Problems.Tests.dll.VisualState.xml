@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1152]E:\Development\Windows\Project Euler\Problems.Tests\bin\Debug\Problems.Tests.dll</TopNode>
+  <SelectedNode>[0-1152]E:\Development\Windows\Project Euler\Problems.Tests\bin\Debug\Problems.Tests.dll</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1152]E:\Development\Windows\Project Euler\Problems.Tests\bin\Debug\Problems.Tests.dll" Expanded="true" />
+    <Node UniqueName="[0-1153]Problems" Expanded="true" />
+    <Node UniqueName="[0-1154]Problems.Tests" Expanded="true" />
+    <Node UniqueName="[0-1009]Problems.Tests.EratosthenesTests" Expanded="true" />
+    <Node UniqueName="[0-1051]Problems.Tests.NumbersTests" Expanded="true" />
+    <Node UniqueName="[0-1155]Problems.Tests.Solutions" Expanded="true" />
+    <Node UniqueName="[0-1144]Problems.Tests.Solutions.Problem4Tests" Expanded="true" />
+    <Node UniqueName="[0-1022]Problems.Tests.StringsTests" Expanded="true" />
+  </Nodes>
+</VisualState>

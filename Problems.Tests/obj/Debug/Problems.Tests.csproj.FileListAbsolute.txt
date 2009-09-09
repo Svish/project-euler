@@ -1,0 +1,9 @@
+E:\Development\Windows\Project Euler\Problems.Tests\bin\Debug\Problems.Tests.dll
+E:\Development\Windows\Project Euler\Problems.Tests\bin\Debug\Problems.Tests.pdb
+E:\Development\Windows\Project Euler\Problems.Tests\bin\Debug\nunit.framework.dll
+E:\Development\Windows\Project Euler\Problems.Tests\bin\Debug\Problems.dll
+E:\Development\Windows\Project Euler\Problems.Tests\bin\Debug\Problems.pdb
+E:\Development\Windows\Project Euler\Problems.Tests\bin\Debug\nunit.framework.xml
+E:\Development\Windows\Project Euler\Problems.Tests\obj\Debug\ResolveAssemblyReference.cache
+E:\Development\Windows\Project Euler\Problems.Tests\obj\Debug\Problems.Tests.dll
+E:\Development\Windows\Project Euler\Problems.Tests\obj\Debug\Problems.Tests.pdb

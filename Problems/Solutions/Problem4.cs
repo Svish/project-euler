@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-
-namespace Problems.Solutions
+﻿namespace Problems.Solutions
 {
     /// <summary>
     /// A palindromic number reads the same both ways. 
@@ -14,12 +9,12 @@ namespace Problems.Solutions
     public class Problem4 : ProblemBase
     {
         public Problem4()
-            : base(4, 906609) { }
+            : base(4, 906609) {}
 
 
         public override long GetAnswer()
         {
-            return (long)Numbers.FindLargestPalindromeMadeFromProductOf(3);
+            return (long) Numbers.FindLargestPalindromeMadeFromProductOf(3);
         }
     }
 }

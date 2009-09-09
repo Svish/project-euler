@@ -36,7 +36,6 @@ namespace Problems.Tests
                 string.Format("{0} % {1}", value, string.Join(", ", divisors.Select(x => x.ToString()).ToArray())));
         }
 
-        [TestCase(0UL, new ulong[] { 0 })]
         [TestCase(1UL, new ulong[] { 1 })]
         [TestCase(2UL, new ulong[] { 2 })]
         [TestCase(6UL, new ulong[] { 2, 3 })]

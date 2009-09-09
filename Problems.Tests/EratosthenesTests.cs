@@ -8,14 +8,14 @@ namespace Problems.Tests
     [TestFixture]
     public class EratosthenesTests
     {
-        [TestCase(15)]
-        [TestCase(12)]
-        [TestCase(120)]
-        public void GetPrimeFactors_Overloads_SameResultsWhenUsingDefaultPrimeSequence(long value)
+        [TestCase(15UL)]
+        [TestCase(12UL)]
+        [TestCase(120UL)]
+        public void GetPrimeFactors_Overloads_SameResultsWhenUsingDefaultPrimeSequence(ulong value)
         {
             var a = Eratosthenes.GetPrimeFactors(value).ToArray();
             var b = Eratosthenes.GetPrimeFactors(value, new Eratosthenes());
-            Assert.That(a, Is.EqualTo(b));
+            Assert.AreEqual(a, b);
         }
 
 
@@ -80,38 +80,29 @@ namespace Problems.Tests
 
 
         [Test]
-        public void GetEnumerator_RanTwice_GetSameNumbers()
+        public void GetEnumerator_WhenRanTwice_GetSameNumbers()
         {
             IPrimeSequence gen = new Eratosthenes();
 
-            var a = gen.Take(25).ToArray();
-            var b = gen.Take(25).ToArray();
+            var a = gen.Take(100).ToArray();
+            var b = gen.Take(100).ToArray();
 
             CollectionAssert.AreEqual(a, b);
         }
 
-
-        [Test]
-        public void GetPrimeFactors_Example_IsCorrect1()
+        [TestCase(13195UL, 29UL)] // The prime factors of 13195 are 5, 7, 13 and 29.
+        public void GetPrimeFactors_LargestPrimeFactorOfExample_IsCorrect(ulong value, ulong largestPrime)
         {
-            var result = Eratosthenes.GetPrimeFactors(15).ToArray();
-            CollectionAssert.AreEquivalent(result, new[] {3, 5});
+            Assert.AreEqual(largestPrime, Eratosthenes.GetPrimeFactors(value).Max());
         }
 
 
-        [Test]
-        public void GetPrimeFactors_Example_IsCorrect2()
+        [TestCase(12UL, new ulong[] { 2, 2, 3 })]
+        [TestCase(15UL, new ulong[] { 3, 5 })]
+        [TestCase(120UL, new ulong[] { 2, 2, 2, 3, 5 })]
+        public void GetPrimeFactors_Examples_AreCorrect(ulong value, ulong[] primeFactors)
         {
-            var result = Eratosthenes.GetPrimeFactors(12).ToArray();
-            CollectionAssert.AreEquivalent(result, new[] {2, 2, 3});
-        }
-
-
-        [Test]
-        public void GetPrimeFactors_Example_IsCorrect3()
-        {
-            var result = Eratosthenes.GetPrimeFactors(120).ToArray();
-            CollectionAssert.AreEquivalent(result, new[] {2, 2, 2, 3, 5});
+            CollectionAssert.AreEquivalent(primeFactors, Eratosthenes.GetPrimeFactors(value).ToArray());
         }
     }
 }

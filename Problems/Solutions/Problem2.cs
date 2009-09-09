@@ -17,12 +17,12 @@ namespace Problems.Solutions
             : base(2, 4613732) {}
 
 
-        public static long SumOfEvenFibonacciNumbersUpTo(long limit, IFibonacciSequence sequence)
+        public static long SumOfEvenFibonacciNumbersUpTo(ulong limit, IFibonacciSequence sequence)
         {
             return sequence
-                .Skip(1)
                 .Where(x => x%2 == 0)
                 .TakeWhile(x => x < limit)
+                .Select(x => (long) x)
                 .Sum();
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 
 
 namespace Problems
@@ -106,6 +107,8 @@ namespace Problems
         /// </summary>
         public static bool IsEvenlyDivisibleBy(this ulong value, params ulong[] divisors)
         {
+            if (divisors.Any(x => x == 0))
+                throw new ArgumentException("Divisors can not be zero.");
             foreach (ulong divisor in divisors)
                 if (value%divisor != 0)
                     return false;

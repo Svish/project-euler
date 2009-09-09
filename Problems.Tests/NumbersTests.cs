@@ -6,6 +6,18 @@ namespace Problems.Tests
     [TestFixture]
     public class NumbersTests
     {
+        [TestCase((byte)0, 0L)] // 0 * 0 = 0
+        [TestCase((byte)1, 9L)] // 9 = 1 * 9
+        [TestCase((byte)2, 9009L)] // 9009 = 91 * 99
+        [TestCase((byte)3, 906609)] // 906609 = 913 * 993
+        [TestCase((byte)4, 99000099)] // 99000099 = 9901 * 9999
+        //[TestCase((byte)5, 0)]
+        public void FindGreatestPalindromeWith_Examples_AreCorrect(byte digits, long result)
+        {
+            Assert.AreEqual(result, Numbers.GetLargestPalindromeMadeFromProductOf(digits));
+        }
+
+
         [TestCase(5UL, 5UL, Result = 5)]
         [TestCase(15UL, 5UL, Result = 5)]
         [TestCase(7UL, 9UL, Result = 1)]

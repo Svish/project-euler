@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 
 
 namespace Problems
@@ -69,6 +70,33 @@ namespace Problems
         public static byte GetNumberOfDigits(this ulong value)
         {
             return (byte) value.ToString(CultureInfo.InvariantCulture).Length;
+        }
+
+
+        public static ulong GetLargestPalindromeMadeFromProductOf(byte digits)
+        {
+            if (digits == 0)
+                return 0;
+
+            ulong largestPalindrome = 0;
+
+            var upper = (ulong)Math.Pow(10, digits) - 1;
+            var lower = (ulong)Math.Pow(10, digits - 1);
+
+            for (var x = upper; x >= lower; x--)
+                for (var y = upper; y >= lower; y--)
+                {
+                    var product = x * y;
+
+                    if (product > largestPalindrome && product.IsPalindrome())
+                    {
+                        largestPalindrome = product;
+                        break;
+                    }
+                }
+            
+            //Console.WriteLine("{2} = {1} * {0}", a, b, largestPalindrome);
+            return largestPalindrome;
         }
     }
 }

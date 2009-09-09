@@ -19,40 +19,7 @@ namespace Problems.Solutions
 
         public override long GetAnswer()
         {
-            return (long)GetLargestPalindromeMadeFromAProductOf(3);
-        }
-
-
-        public static ulong GetLargestPalindromeMadeFromAProductOf(byte digits)
-        {
-            if (digits == 0)
-                return 0;
-
-            ulong largestPalindrome = 0;
-
-            ulong start = (ulong)Math.Pow(10, digits) - 1;
-            var numbers = DecreasingNumbers(start)
-                .TakeWhile(x => x.GetNumberOfDigits() == digits);
-
-            foreach (var x in numbers)
-                foreach (var y in numbers)
-                {
-                    var product = x * y;
-
-                    if (product.IsPalindrome() && product > largestPalindrome)
-                        largestPalindrome = product;
-                }
-
-            return largestPalindrome;
-        }
-
-
-        private static IEnumerable<ulong> DecreasingNumbers(ulong start)
-        {
-            do
-            {
-                yield return start--;
-            } while (start != 0);
+            return (long)Numbers.GetLargestPalindromeMadeFromProductOf(3);
         }
     }
 }

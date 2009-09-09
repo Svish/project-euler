@@ -16,13 +16,7 @@ namespace Problems.Solutions
 
         public override long GetAnswer()
         {
-            return GetLargestPrimeFactorOf(600851475143);
-        }
-
-
-        public static long GetLargestPrimeFactorOf(long number)
-        {
-            return Eratosthenes.GetPrimeFactors(number).Max();
+            return (long) Eratosthenes.GetPrimeFactors(600851475143).Max();
         }
     }
 }

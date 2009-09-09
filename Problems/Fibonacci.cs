@@ -7,11 +7,11 @@ namespace Problems
     public class Fibonacci : IFibonacciSequence
     {
         #region IFibonacciSequence Members
-        public IEnumerator<long> GetEnumerator()
+        public IEnumerator<ulong> GetEnumerator()
         {
-            long a = 0;
-            long b = 1;
-            long c = a + b;
+            var a = 0UL;
+            var b = 1UL;
+            var c = a + b;
 
             while (true)
             {

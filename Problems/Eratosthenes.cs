@@ -13,7 +13,7 @@ namespace Problems
     // http://www.blackwasp.co.uk/PrimeFactors.aspx
     public class Eratosthenes : IPrimeSequence
     {
-        private readonly List<long> primes;
+        private readonly List<ulong> primes;
 
 
         /// <summary>
@@ -21,19 +21,19 @@ namespace Problems
         /// </summary>
         public Eratosthenes()
         {
-            primes = new List<long> {2, 3};
+            primes = new List<ulong> {2, 3};
         }
 
 
         #region IPrimeSequence Members
-        public IEnumerator<long> GetEnumerator()
+        public IEnumerator<ulong> GetEnumerator()
         {
             // Return the ones we know
-            foreach (long prime in primes)
+            foreach (var prime in primes)
                 yield return prime;
 
             // Then find new ones
-            long possible = primes.Last();
+            var possible = primes.Last();
             while (true)
                 if (IsPrime(possible += 2))
                 {
@@ -53,7 +53,7 @@ namespace Problems
         /// <summary>
         /// Returns the prime factors of the given number. Uses an instance of <see cref="Eratosthenes"/> for <see cref="IPrimeSequence"/>.
         /// </summary>
-        public static IEnumerable<long> GetPrimeFactors(long value)
+        public static IEnumerable<ulong> GetPrimeFactors(ulong value)
         {
             return GetPrimeFactors(value, new Eratosthenes());
         }
@@ -62,9 +62,9 @@ namespace Problems
         /// <summary>
         /// Returns the prime factors of the given number.
         /// </summary>
-        public static IEnumerable<long> GetPrimeFactors(long value, IPrimeSequence primeSequence)
+        public static IEnumerable<ulong> GetPrimeFactors(ulong value, IPrimeSequence primeSequence)
         {
-            foreach (int prime in primeSequence)
+            foreach (var prime in primeSequence)
             {
                 while (value%prime == 0)
                 {
@@ -80,9 +80,9 @@ namespace Problems
         }
 
 
-        private bool IsPrime(long value)
+        private bool IsPrime(ulong value)
         {
-            long sqrt = (long) Math.Sqrt(value);
+            var sqrt = (ulong) Math.Sqrt(value);
             return !primes
                 .TakeWhile(x => x <= sqrt)
                 .Any(x => value%x == 0);

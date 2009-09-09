@@ -12,59 +12,58 @@
   <RecentFiles>
     <RecentFiles>
       <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Properties/f:AssemblyInfo.cs" caret="1420" fromTop="30" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem3.cs" caret="631" fromTop="27" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem2.cs" caret="981" fromTop="30" />
       <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Properties/f:AssemblyInfo.cs" caret="1408" fromTop="30" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:IPrimeSequence.cs" caret="243" fromTop="9" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:IFibonacciSequence.cs" caret="243" fromTop="9" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Fibonacci.cs" caret="649" fromTop="32" />
       <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Strings.cs" caret="1035" fromTop="19" />
       <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:StringsTests.cs" caret="1424" fromTop="19" />
       <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:FibonacciTests.cs" caret="920" fromTop="11" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:EratosthenesTests.cs" caret="4639" fromTop="8" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:NumbersTests.cs" caret="2675" fromTop="14" />
       <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:ProblemBase.cs" caret="362" fromTop="12" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Eratosthenes.cs" caret="363" fromTop="4" />
       <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem1.cs" caret="413" fromTop="13" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:Problem3Tests.cs" caret="178" fromTop="9" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="903" fromTop="2" />
       <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ProblemBaseTests.cs" caret="768" fromTop="27" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:ISolution.cs" caret="177" fromTop="8" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ISolutionTests.cs" caret="807" fromTop="23" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="1162" fromTop="26" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:Problem4Tests.cs" caret="336" fromTop="12" />
+      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ISolutionTests.cs" caret="0" fromTop="0" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:ISolution.cs" caret="0" fromTop="0" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="0" fromTop="0" />
+      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:EratosthenesTests.cs" caret="5194" fromTop="68" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem2.cs" caret="957" fromTop="19" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Fibonacci.cs" caret="331" fromTop="10" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:IFibonacciSequence.cs" caret="233" fromTop="8" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem3.cs" caret="385" fromTop="11" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Eratosthenes.cs" caret="2315" fromTop="29" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:IPrimeSequence.cs" caret="233" fromTop="8" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Copy of Problem4.cs" caret="693" fromTop="22" />
+      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:NumbersTests.cs" caret="827" fromTop="10" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3145" fromTop="17" />
     </RecentFiles>
     <RecentEdits>
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:FibonacciTests.cs" caret="1207" fromTop="11" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:ProblemBase.cs" caret="362" fromTop="12" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ProblemBaseTests.cs" caret="844" fromTop="8" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ProblemBaseTests.cs" caret="844" fromTop="22" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ProblemBaseTests.cs" caret="844" fromTop="11" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ProblemBaseTests.cs" caret="455" fromTop="11" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ProblemBaseTests.cs" caret="821" fromTop="27" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="463" fromTop="22" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="176" fromTop="3" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="1189" fromTop="0" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:ISolution.cs" caret="166" fromTop="6" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ISolutionTests.cs" caret="996" fromTop="27" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ISolutionTests.cs" caret="996" fromTop="20" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ISolutionTests.cs" caret="985" fromTop="19" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem1.cs" caret="413" fromTop="13" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:Problem4Tests.cs" caret="150" fromTop="7" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:Problem3Tests.cs" caret="178" fromTop="9" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ISolutionTests.cs" caret="403" fromTop="9" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:ISolutionTests.cs" caret="869" fromTop="20" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="495" fromTop="16" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="664" fromTop="6" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="1355" fromTop="24" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="582" fromTop="8" />
-      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/d:Solutions/f:Problem4Tests.cs" caret="336" fromTop="12" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="1013" fromTop="8" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="834" fromTop="9" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="834" fromTop="13" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="894" fromTop="12" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="834" fromTop="27" />
-      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/d:Solutions/f:Problem4.cs" caret="834" fromTop="5" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="13" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="0" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="18" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="20" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="16" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="25" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="12" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="14" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="44" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="44" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="2" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="9" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="1" />
+      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:NumbersTests.cs" caret="4130" fromTop="6" />
+      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:NumbersTests.cs" caret="4130" fromTop="14" />
+      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:NumbersTests.cs" caret="3239" fromTop="0" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="24" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="23" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="23" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="18" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="26" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Eratosthenes.cs" caret="2290" fromTop="19" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="19" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="20" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="17" />
+      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:NumbersTests.cs" caret="1475" fromTop="16" />
+      <File id="EE6CAD4E-08FA-4F7D-9210-925C95D87A74/f:NumbersTests.cs" caret="827" fromTop="7" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="3436" fromTop="11" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="248" fromTop="0" />
+      <File id="4B8DB562-9776-4C45-8A56-C17779EDEC66/f:Numbers.cs" caret="428" fromTop="10" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -72,42 +71,42 @@
   </UnitTestRunner>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="int" priority="30" />
+      <Item value="int" priority="31" />
       <Item value="TResult" priority="0" />
-      <Item value="return" priority="36" />
+      <Item value="return" priority="43" />
       <Item value="IEnumerable" priority="7" />
       <Item value="using" priority="2" />
       <Item value="NUnit.Framework" priority="0" />
       <Item value="TestFixture" priority="1" />
-      <Item value="public" priority="22" />
+      <Item value="public" priority="24" />
       <Item value="void" priority="9" />
-      <Item value="Assert" priority="23" />
-      <Item value="result" priority="2" />
-      <Item value="static" priority="14" />
+      <Item value="Assert" priority="25" />
+      <Item value="result" priority="4" />
+      <Item value="static" priority="16" />
       <Item value="null" priority="2" />
-      <Item value="throw" priority="4" />
-      <Item value="new" priority="24" />
+      <Item value="throw" priority="6" />
+      <Item value="new" priority="34" />
       <Item value="NotImplementedException" priority="2" />
-      <Item value="var" priority="33" />
+      <Item value="var" priority="42" />
       <Item value="Int64" priority="0" />
-      <Item value="TestCase" priority="4" />
-      <Item value="object" priority="1" />
-      <Item value="Numbers" priority="4" />
+      <Item value="TestCase" priority="5" />
+      <Item value="object" priority="2" />
+      <Item value="Numbers" priority="7" />
       <Item value="numbers" priority="3" />
       <Item value="Description" priority="0" />
       <Item value="Result" priority="2" />
-      <Item value="long" priority="26" />
+      <Item value="long" priority="34" />
       <Item value="yield break" priority="7" />
       <Item value="Tools" priority="3" />
       <Item value="CollectionAssert" priority="4" />
       <Item value="yield return" priority="8" />
-      <Item value="while" priority="11" />
-      <Item value="bool" priority="8" />
-      <Item value="true" priority="6" />
-      <Item value="for" priority="2" />
+      <Item value="while" priority="12" />
+      <Item value="bool" priority="13" />
+      <Item value="true" priority="11" />
+      <Item value="for" priority="3" />
       <Item value="HashSet" priority="0" />
       <Item value="nextPrime" priority="0" />
-      <Item value="if" priority="17" />
+      <Item value="if" priority="23" />
       <Item value="primes" priority="4" />
       <Item value="prime" priority="2" />
       <Item value="GetPrimeFactors" priority="1" />
@@ -122,22 +121,22 @@
       <Item value="Problem1Tests" priority="0" />
       <Item value="problem" priority="0" />
       <Item value="Problem3" priority="1" />
-      <Item value="Eratosthenes" priority="10" />
-      <Item value="private" priority="7" />
+      <Item value="Eratosthenes" priority="11" />
+      <Item value="private" priority="9" />
       <Item value="List" priority="2" />
       <Item value="IDisposable" priority="0" />
       <Item value="List&lt;long&gt;" priority="0" />
-      <Item value="foreach" priority="5" />
-      <Item value="in" priority="5" />
+      <Item value="foreach" priority="6" />
+      <Item value="in" priority="6" />
       <Item value="possible" priority="0" />
-      <Item value="Math" priority="4" />
-      <Item value="value" priority="22" />
+      <Item value="Math" priority="6" />
+      <Item value="value" priority="24" />
       <Item value="IsPrime" priority="0" />
       <Item value="ntm" priority="0" />
-      <Item value="test" priority="21" />
+      <Item value="test" priority="24" />
       <Item value="IPrimeGenerator" priority="1" />
       <Item value="gen" priority="4" />
-      <Item value="a" priority="11" />
+      <Item value="a" priority="13" />
       <Item value="nguid" priority="0" />
       <Item value="IFibonacciGenerator" priority="2" />
       <Item value="FibonacciSimple" priority="0" />
@@ -151,37 +150,37 @@
       <Item value="byte" priority="3" />
       <Item value="this" priority="8" />
       <Item value="GetNumberOfDigits" priority="0" />
-      <Item value="false" priority="3" />
-      <Item value="cw" priority="12" />
-      <Item value="number" priority="0" />
+      <Item value="false" priority="4" />
+      <Item value="cw" priority="15" />
+      <Item value="number" priority="6" />
       <Item value="double" priority="0" />
-      <Item value="digits" priority="2" />
-      <Item value="string" priority="13" />
+      <Item value="digits" priority="3" />
+      <Item value="string" priority="16" />
       <Item value="text" priority="15" />
       <Item value="s" priority="1" />
       <Item value="original" priority="0" />
       <Item value="Strings" priority="0" />
-      <Item value="Throws" priority="0" />
+      <Item value="Throws" priority="1" />
       <Item value="typeof" priority="2" />
       <Item value="ArgumentNullException" priority="0" />
       <Item value="StringComparison" priority="0" />
-      <Item value="b" priority="8" />
+      <Item value="b" priority="10" />
       <Item value="actualDigits" priority="0" />
-      <Item value="i" priority="4" />
+      <Item value="i" priority="7" />
       <Item value="length" priority="1" />
       <Item value="c" priority="1" />
       <Item value="const" priority="1" />
       <Item value="StringComparer" priority="0" />
-      <Item value="start" priority="3" />
+      <Item value="start" priority="4" />
       <Item value="DecreasingNumbers" priority="0" />
       <Item value="SortedList" priority="0" />
       <Item value="palindromes" priority="1" />
       <Item value="IsPalindrome2" priority="0" />
       <Item value="reversed" priority="2" />
       <Item value="Reverse" priority="0" />
-      <Item value="n" priority="3" />
+      <Item value="n" priority="8" />
       <Item value="do" priority="0" />
-      <Item value="ulong" priority="8" />
+      <Item value="ulong" priority="29" />
       <Item value="Fibonacci" priority="2" />
       <Item value="as" priority="2" />
       <Item value="enumerator" priority="2" />
@@ -196,22 +195,35 @@
       <Item value="Type" priority="1" />
       <Item value="Assembly" priority="0" />
       <Item value="assembly" priority="0" />
-      <Item value="Where" priority="1" />
+      <Item value="Where" priority="3" />
       <Item value="TypeFilter" priority="1" />
       <Item value="InterfaceFilter" priority="0" />
       <Item value="implementors" priority="0" />
       <Item value="largestPrime" priority="0" />
       <Item value="product" priority="0" />
-      <Item value="largestPalindrome" priority="5" />
+      <Item value="largestPalindrome" priority="6" />
       <Item value="DBNull" priority="0" />
-      <Item value="break" priority="0" />
+      <Item value="break" priority="1" />
       <Item value="db" priority="0" />
+      <Item value="last" priority="0" />
+      <Item value="continue" priority="0" />
+      <Item value="ok" priority="0" />
+      <Item value="v" priority="0" />
+      <Item value="IsEvenlyDivisibleBy" priority="0" />
+      <Item value="values" priority="1" />
+      <Item value="divisors" priority="7" />
+      <Item value="toar" priority="0" />
+      <Item value="primeFactors" priority="0" />
+      <Item value="Max" priority="0" />
+      <Item value="Contains" priority="0" />
+      <Item value="Any" priority="0" />
+      <Item value="ArgumentException" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
       <Item value="AreSame" priority="0" />
       <Item value="IsEmpty" priority="0" />
-      <Item value="AreEqual" priority="18" />
-      <Item value="That" priority="6" />
+      <Item value="AreEqual" priority="21" />
+      <Item value="That" priority="7" />
       <Item value="IsTrue" priority="6" />
       <Item value="IsFalse" priority="2" />
     </ItemStatistics>
@@ -225,8 +237,10 @@
       <Item value="Max" priority="0" />
       <Item value="Any" priority="0" />
       <Item value="ToString" priority="0" />
-      <Item value="Where" priority="1" />
+      <Item value="Where" priority="2" />
       <Item value="TakeWhile" priority="0" />
+      <Item value="Cast" priority="0" />
+      <Item value="Select" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Problems.Tools">
       <Item value="PrimeGenerator" priority="0" />
@@ -237,8 +251,8 @@
       <Item value="AreEquivalent" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Math">
-      <Item value="Sqrt" priority="1" />
-      <Item value="Pow" priority="3" />
+      <Item value="Sqrt" priority="2" />
+      <Item value="Pow" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
       <Item value="GetEnumerator" priority="0" />
@@ -265,9 +279,10 @@
     <ItemStatistics item="Qualified:@Problems.Numbers">
       <Item value="IsPalindrome" priority="1" />
       <Item value="GetNumberOfDigits" priority="0" />
+      <Item value="FindSmallestNumberDivisibleBy" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int64">
-      <Item value="MaxValue" priority="1" />
+      <Item value="MaxValue" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Int64">
       <Item value="GetNumberOfDigits" priority="4" />
@@ -295,13 +310,15 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="IsNullOrEmpty" priority="0" />
-      <Item value="Format" priority="0" />
+      <Item value="Format" priority="1" />
+      <Item value="Join" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Problems.Strings">
       <Item value="Reverse" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@NUnit.Framework.Throws">
       <Item value="InstanceOf" priority="0" />
+      <Item value="ArgumentException" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.StringComparison">
       <Item value="Ordinal" priority="0" />
@@ -321,7 +338,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.UInt64">
       <Item value="MinValue" priority="1" />
-      <Item value="MaxValue" priority="0" />
+      <Item value="MaxValue" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.UInt32">
       <Item value="Reverse" priority="0" />
@@ -362,6 +379,10 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.UInt64">
       <Item value="IsPalindrome" priority="0" />
+      <Item value="IsEvenlyDivisibleBy" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Problems.Eratosthenes">
+      <Item value="TakeWhile" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

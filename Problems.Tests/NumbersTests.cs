@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System.Linq;
+using NUnit.Framework;
 
 
 namespace Problems.Tests
@@ -14,7 +15,27 @@ namespace Problems.Tests
         //[TestCase((byte)5, 0)]
         public void FindGreatestPalindromeWith_Examples_AreCorrect(byte digits, long result)
         {
-            Assert.AreEqual(result, Numbers.GetLargestPalindromeMadeFromProductOf(digits));
+            Assert.AreEqual(result, Numbers.FindLargestPalindromeMadeFromProductOf(digits));
+        }
+
+
+        [TestCase(true, 0UL, new ulong[] { 5 })]
+        [TestCase(true, 5UL, new ulong[] { 5 })]
+        [TestCase(true, 6UL, new ulong[] { 2, 3 })]
+        [TestCase(false, 8UL, new ulong[] { 2, 3 })]
+        [TestCase(true, 10UL, new ulong[] { 10, 5, 2 })]
+        [TestCase(false, 10UL, new ulong[] { 10, 5, 3 })]
+        public void IsEvenlyDivisibleBy_Examples_AreCorrect(bool result, ulong value, ulong[] divisors)
+        {
+            Assert.AreEqual(result, value.IsEvenlyDivisibleBy(divisors), 
+                string.Format("{0} % {1}", value, string.Join(", ", divisors.Select(x => x.ToString()).ToArray())));
+        }
+
+        [TestCase(2520UL, new ulong[] { 4, 6, 7, 8, 9, 10 })]   // 1 to 10, with "doubles" skipped
+        [TestCase(232792560UL, new ulong[] { 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 })]   // 1 to 20, with "doubles" skipped
+        public void FindSmallestNumberDivisibleBy_Examples_AreCorrect(ulong result, ulong[] divisors)
+        {
+            Assert.AreEqual(result, Numbers.FindSmallestNumberDivisibleBy(divisors));
         }
 
 

@@ -19,7 +19,7 @@ namespace Problems.Solutions
 
         public override long GetAnswer()
         {
-            return (long)Numbers.GetLargestPalindromeMadeFromProductOf(3);
+            return (long)Numbers.FindLargestPalindromeMadeFromProductOf(3);
         }
     }
 }

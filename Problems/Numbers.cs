@@ -72,8 +72,20 @@ namespace Problems
             return (byte) value.ToString(CultureInfo.InvariantCulture).Length;
         }
 
+        public static ulong FindSmallestNumberDivisibleBy(params ulong[] divisors)
+        {
+            ulong n = 1;
 
-        public static ulong GetLargestPalindromeMadeFromProductOf(byte digits)
+            while (!n.IsEvenlyDivisibleBy(divisors) && n <= long.MaxValue)
+                n++;
+
+            if (n == long.MaxValue && !n.IsEvenlyDivisibleBy(divisors))
+                return 0;
+
+            return n;
+        }
+
+        public static ulong FindLargestPalindromeMadeFromProductOf(byte digits)
         {
             if (digits == 0)
                 return 0;
@@ -97,6 +109,15 @@ namespace Problems
             
             //Console.WriteLine("{2} = {1} * {0}", a, b, largestPalindrome);
             return largestPalindrome;
+        }
+
+
+        public static bool IsEvenlyDivisibleBy(this ulong value, params ulong[] divisors)
+        {
+            foreach(var divisor in divisors)
+                if(value%divisor != 0)
+                    return false;
+            return true;
         }
     }
 }

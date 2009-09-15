@@ -1,7 +1,4 @@
-﻿using System.Linq;
-
-
-namespace Problems.Solutions
+﻿namespace Problems.Solutions
 {
     /// <summary>
     /// 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
@@ -12,6 +9,7 @@ namespace Problems.Solutions
     {
         public Problem5()
             : base(5, 232792560) {}
+
 
         public override long GetAnswer()
         {

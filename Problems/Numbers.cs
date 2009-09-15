@@ -19,12 +19,13 @@ namespace Problems
             }
             return r;
         }
-        
-        
+
+
         public static ulong GetLowestCommonMultiple(ulong a, ulong b)
         {
-            return (a * b) / GetGreatestCommonDivisor(a, b);
+            return (a*b)/GetGreatestCommonDivisor(a, b);
         }
+
 
         /// <summary>
         /// Returns the greatest common divisor of the two numbers.
@@ -33,7 +34,7 @@ namespace Problems
         {
             while (b != 0)
             {
-                var t = b;
+                ulong t = b;
                 b = a%b;
                 a = t;
             }
@@ -64,7 +65,7 @@ namespace Problems
         /// </summary>
         public static ulong FindSmallestNumberDivisibleBy(params ulong[] divisors)
         {
-            return divisors.Aggregate(1UL, Numbers.GetLowestCommonMultiple);
+            return divisors.Aggregate(1UL, GetLowestCommonMultiple);
         }
 
 
@@ -94,7 +95,6 @@ namespace Problems
                     }
                 }
 
-            //Console.WriteLine("{2} = {1} * {0}", a, b, largestPalindrome);
             return largestPalindrome;
         }
 

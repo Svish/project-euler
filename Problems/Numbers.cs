@@ -33,7 +33,7 @@ namespace Problems
         {
             while (b != 0)
             {
-                ulong t = b;
+                var t = b;
                 b = a%b;
                 a = t;
             }
@@ -64,15 +64,7 @@ namespace Problems
         /// </summary>
         public static ulong FindSmallestNumberDivisibleBy(params ulong[] divisors)
         {
-            ulong n = 1;
-
-            while (!n.IsEvenlyDivisibleBy(divisors) && n <= long.MaxValue)
-                n++;
-
-            if (n == long.MaxValue && !n.IsEvenlyDivisibleBy(divisors))
-                return 0;
-
-            return n;
+            return divisors.Aggregate(1UL, Numbers.GetLowestCommonMultiple);
         }
 
 

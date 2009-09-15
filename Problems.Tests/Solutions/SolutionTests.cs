@@ -32,7 +32,7 @@ namespace Problems.Tests.Solutions
                 Assert.AreEqual(solution.ExpectedAnswer, solution.GetAnswer(),
                     string.Format("Solution to problem #{0} is not correct.", solution.ProblemId));
                 
-                Console.WriteLine("Solution to problem #{0} took {1} ms to find", 
+                Console.WriteLine("Solution to problem #{0,-3}{1,15:0.000} ms", 
                     solution.ProblemId, 
                     (DateTime.Now - start).TotalMilliseconds);
             }

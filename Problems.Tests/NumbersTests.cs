@@ -58,6 +58,17 @@ namespace Problems.Tests
         }
 
 
+        [TestCase(12UL, 15UL, Result = 60)]
+        [TestCase(18UL, 24UL, Result = 72)]
+        [TestCase(9UL, 10UL, Result = 90)]
+        [TestCase(14UL, 42UL, Result = 42)]
+        [TestCase(18UL, 30UL, Result = 90)]
+        public ulong LowestCommonMultiple_Examples_AreCorrect(ulong a, ulong b)
+        {
+            return Numbers.GetLowestCommonMultiple(a, b);
+        }
+
+
         [TestCase(0UL, 1)]
         [TestCase(1UL, 1)]
         [TestCase(11UL, 2)]

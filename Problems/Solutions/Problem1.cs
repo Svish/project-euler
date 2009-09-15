@@ -14,21 +14,13 @@ namespace Problems.Solutions
             : base(1, 233168) {}
 
 
-        /// <summary>
-        /// Sums all the numbers from 0 up to the limit that are a multiple of one the given multiples.
-        /// </summary>
-        private static int SumOfNumbersUpTo(int limit, params int[] multiples)
-        {
-            return Enumerable
-                .Range(0, limit)
-                .Where(x => multiples.Any(y => x%y == 0))
-                .Sum();
-        }
-
-
         public override long GetAnswer()
         {
-            return SumOfNumbersUpTo(1000, 3, 5);
+            var multiples = new long[] {3, 5};
+            return Enumerable
+                .Range(0, 1000)
+                .Where(x => multiples.Any(y => x%y == 0))
+                .Sum();
         }
     }
 }

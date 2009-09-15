@@ -43,6 +43,7 @@
     <Compile Include="Fibonacci.cs" />
     <Compile Include="IFibonacciSequence.cs" />
     <Compile Include="IPrimeSequence.cs" />
+    <Compile Include="Solutions\Problem8.cs" />
     <Compile Include="Solutions\Problem7.cs" />
     <Compile Include="Solutions\Problem6.cs" />
     <Compile Include="Solutions\Problem5.cs" />

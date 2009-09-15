@@ -19,7 +19,12 @@ namespace Problems
             }
             return r;
         }
-
+        
+        
+        public static ulong GetLowestCommonMultiple(ulong a, ulong b)
+        {
+            return (a * b) / GetGreatestCommonDivisor(a, b);
+        }
 
         /// <summary>
         /// Returns the greatest common divisor of the two numbers.

@@ -17,19 +17,12 @@ namespace Problems.Solutions
             : base(2, 4613732) {}
 
 
-        public static long SumOfEvenFibonacciNumbersUpTo(ulong limit, IFibonacciSequence sequence)
-        {
-            return sequence
-                .Where(x => x%2 == 0)
-                .TakeWhile(x => x < limit)
-                .Select(x => (long) x)
-                .Sum();
-        }
-
-
         public override long GetAnswer()
         {
-            return SumOfEvenFibonacciNumbersUpTo(4000000, new Fibonacci());
+            return (long) new Fibonacci()
+                .Where(x => x%2 == 0)
+                .TakeWhile(x => x < 4000000)
+                .Aggregate((sum, x) => sum + x);
         }
     }
 }

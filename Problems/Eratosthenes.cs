@@ -13,7 +13,7 @@ namespace Problems
     // http://www.blackwasp.co.uk/PrimeFactors.aspx
     public class Eratosthenes : IPrimeSequence
     {
-        private readonly List<ulong> primes;
+        private readonly List<ulong> knownPrimes;
 
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace Problems
         /// </summary>
         public Eratosthenes()
         {
-            primes = new List<ulong> {2, 3};
+            knownPrimes = new List<ulong> {2, 3};
         }
 
 
@@ -29,16 +29,16 @@ namespace Problems
         public IEnumerator<ulong> GetEnumerator()
         {
             // Return the ones we know
-            foreach (var prime in primes)
+            foreach (var prime in knownPrimes)
                 yield return prime;
 
             // Then find new ones
-            var possible = primes.Last();
+            var possible = knownPrimes.Last();
             while (true)
                 if (IsPrime(possible += 2))
                 {
                     yield return possible;
-                    primes.Add(possible);
+                    knownPrimes.Add(possible);
                 }
         }
 
@@ -83,7 +83,7 @@ namespace Problems
         private bool IsPrime(ulong value)
         {
             var sqrt = (ulong) Math.Sqrt(value);
-            return !primes
+            return !knownPrimes
                 .TakeWhile(x => x <= sqrt)
                 .Any(x => value%x == 0);
         }

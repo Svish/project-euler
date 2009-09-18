@@ -9,6 +9,7 @@ namespace Problems
     {
         /// <summary>
         /// Reverses the number.
+        /// </summary>
         public static ulong Reverse(this ulong n)
         {
             ulong r = 0L;
@@ -20,7 +21,9 @@ namespace Problems
             return r;
         }
 
-
+        /// <summary>
+        /// Returns the lowest common multiple of two numbers.
+        /// </summary>
         public static ulong GetLowestCommonMultiple(ulong a, ulong b)
         {
             return (a*b)/GetGreatestCommonDivisor(a, b);
@@ -28,7 +31,7 @@ namespace Problems
 
 
         /// <summary>
-        /// Returns the greatest common divisor of the two numbers.
+        /// Returns the greatest common divisor of two numbers.
         /// </summary>
         public static ulong GetGreatestCommonDivisor(ulong a, ulong b)
         {

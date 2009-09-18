@@ -4,7 +4,10 @@ using System.Collections.Generic;
 
 namespace Problems
 {
-    public class Fibonacci : IFibonacciSequence
+    /// <summary>
+    /// Generates the Fibonacci sequence, starting with 1, 1, 2, 3, 5 and so on.
+    /// </summary>
+    public class FibonacciSequence : IEnumerable<ulong>
     {
         #region IFibonacciSequence Members
         public IEnumerator<ulong> GetEnumerator()

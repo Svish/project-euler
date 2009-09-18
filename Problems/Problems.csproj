@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Lokad.Shared, Version=1.5.118.1, Culture=neutral, PublicKeyToken=43f0664b2b4db1fc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Lokad\Lokad.Shared.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -40,9 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Eratosthenes.cs" />
-    <Compile Include="Fibonacci.cs" />
-    <Compile Include="IFibonacciSequence.cs" />
+    <Compile Include="FibonacciSequence.cs" />
     <Compile Include="IPrimeSequence.cs" />
+    <Compile Include="PythagoreanTriples.cs" />
+    <Compile Include="Solutions\Problem9.cs" />
     <Compile Include="Solutions\Problem8.cs" />
     <Compile Include="Solutions\Problem7.cs" />
     <Compile Include="Solutions\Problem6.cs" />

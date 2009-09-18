@@ -19,7 +19,7 @@ namespace Problems.Solutions
 
         public override long GetAnswer()
         {
-            return (long) new Fibonacci()
+            return (long) new FibonacciSequence()
                 .Where(x => x%2 == 0)
                 .TakeWhile(x => x < 4000000)
                 .Aggregate((sum, x) => sum + x);

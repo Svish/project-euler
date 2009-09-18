@@ -64,7 +64,7 @@ namespace Problems.Tests
 
 
         [Test]
-        public void GetEnumerator_GenericAndNonGeneric_FirstHundredAreTheSame()
+        public void GetEnumerator_RegularAndGeneric_FirstHundredAreTheSame()
         {
             var gen = new Eratosthenes();
 

@@ -11,10 +11,10 @@ namespace Problems.Solutions
     public class Problem7 : ProblemBase
     {
         public Problem7()
-            : base(7, 104743) {}
+            : base(104743) {}
 
 
-        public override long GetAnswer()
+        protected override long GetAnswer()
         {
             return (long) new Eratosthenes().Take(10001).Last();
         }

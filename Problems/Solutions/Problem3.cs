@@ -11,10 +11,10 @@ namespace Problems.Solutions
     public class Problem3 : ProblemBase
     {
         public Problem3()
-            : base(3, 6857) {}
+            : base(6857) {}
 
 
-        public override long GetAnswer()
+        protected override long GetAnswer()
         {
             return (long) Eratosthenes.GetPrimeFactors(600851475143).Max();
         }

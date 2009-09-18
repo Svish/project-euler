@@ -11,10 +11,10 @@ namespace Problems.Solutions
     public class Problem1 : ProblemBase
     {
         public Problem1()
-            : base(1, 233168) {}
+            : base(233168) {}
 
 
-        public override long GetAnswer()
+        protected override long GetAnswer()
         {
             var multiples = new long[] {3, 5};
             return Enumerable

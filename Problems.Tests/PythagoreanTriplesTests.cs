@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using Lokad;
 using NUnit.Framework;
@@ -9,7 +10,7 @@ namespace Problems.Tests
     public class PythagoreanTriplesTests
     {
         [Test]
-        public void GetEnumerator_First50_AreCorrect()
+        public void GetEnumerator_FirstFifty_AreCorrect()
         {
             var first = new[]
                 {
@@ -66,6 +67,22 @@ namespace Problems.Tests
                 };
 
             CollectionAssert.AreEquivalent(first, new PythagoreanTriples().Take(50).ToArray());
+        }
+
+
+        [Test]
+        public void GetEnumerator_GenericAndRegular_FirstFiftyAreTheSame()
+        {
+            var gen = new PythagoreanTriples();
+
+            using (var g = gen.GetEnumerator())
+            {
+                var e = (gen as IEnumerable).GetEnumerator();
+                
+                int i = 0;
+                while (i++ < 50 && g.MoveNext() && e.MoveNext())
+                    Assert.AreEqual(g.Current, e.Current);
+            }
         }
     }
 }

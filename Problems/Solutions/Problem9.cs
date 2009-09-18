@@ -16,9 +16,10 @@ namespace Problems.Solutions
     public class Problem9 : ProblemBase
     {
         public Problem9()
-            : base(9, 31875000) { }
+            : base(31875000) { }
 
-        public override long GetAnswer()
+
+        protected override long GetAnswer()
         {
             var t = new PythagoreanTriples().First(x => x.Item1 + x.Item2 + x.Item3 == 1000);
             return (long)(t.Item1 * t.Item2 * t.Item3);

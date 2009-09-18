@@ -2,8 +2,7 @@
 {
     public interface ISolution
     {
-        int ProblemId { get; }
         long ExpectedAnswer { get; }
-        long GetAnswer();
+        long ActualAnswer { get; }
     }
 }

@@ -14,10 +14,10 @@ namespace Problems.Solutions
     public class Problem2 : ProblemBase
     {
         public Problem2()
-            : base(2, 4613732) {}
+            : base(4613732) {}
 
 
-        public override long GetAnswer()
+        protected override long GetAnswer()
         {
             return (long) new FibonacciSequence()
                 .Where(x => x%2 == 0)

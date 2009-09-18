@@ -9,10 +9,10 @@
     public class Problem4 : ProblemBase
     {
         public Problem4()
-            : base(4, 906609) {}
+            : base(906609) {}
 
 
-        public override long GetAnswer()
+        protected override long GetAnswer()
         {
             return (long) Numbers.FindLargestPalindromeMadeFromProductOf(3);
         }

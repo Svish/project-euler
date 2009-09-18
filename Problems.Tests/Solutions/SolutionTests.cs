@@ -28,13 +28,17 @@ namespace Problems.Tests.Solutions
             {
                 var solution = (ISolution) Activator.CreateInstance(i);
                 var start = DateTime.Now;
-                
-                Assert.AreEqual(solution.ExpectedAnswer, solution.GetAnswer(),
-                    string.Format("Solution to problem #{0} is not correct.", solution.ProblemId));
-                
-                Console.WriteLine("Solution to problem #{0,-3}{1,15:0.000} ms", 
-                    solution.ProblemId, 
-                    (DateTime.Now - start).TotalMilliseconds);
+
+                var expected = solution.ExpectedAnswer;
+                var actual = solution.ActualAnswer;
+
+                Assert.AreEqual(actual, expected,
+                    string.Format("Solution of {0} is not correct", solution, Environment.NewLine));
+
+                var time = DateTime.Now - start;
+                Console.WriteLine("{0,-20}OK     {1,15:0.000}", 
+                    solution, 
+                    time.TotalMilliseconds);
             }
         }
     }

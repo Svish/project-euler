@@ -11,10 +11,10 @@ namespace Problems.Solutions
     public class Problem6 : ProblemBase
     {
         public Problem6()
-            : base(6, 25164150) {}
+            : base(25164150) {}
 
 
-        public override long GetAnswer()
+        protected override long GetAnswer()
         {
             var numbers = Enumerable.Range(1, 100);
 

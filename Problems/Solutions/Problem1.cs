@@ -14,7 +14,7 @@ namespace Problems.Solutions
             : base(233168) {}
 
 
-        protected override long GetAnswer()
+        protected override object GetAnswer()
         {
             var multiples = new long[] {3, 5};
             return Enumerable

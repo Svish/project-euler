@@ -12,9 +12,9 @@
             : base(906609) {}
 
 
-        protected override long GetAnswer()
+        protected override object GetAnswer()
         {
-            return (long) Numbers.FindLargestPalindromeMadeFromProductOf(3);
+            return Numbers.FindLargestPalindromeMadeFromProductOf(3);
         }
     }
 }

@@ -14,9 +14,9 @@ namespace Problems.Solutions
             : base(104743) {}
 
 
-        protected override long GetAnswer()
+        protected override object GetAnswer()
         {
-            return (long) new Eratosthenes().Take(10001).Last();
+            return new Eratosthenes().Take(10001).Last();
         }
     }
 }

@@ -46,7 +46,9 @@
     <Compile Include="Eratosthenes.cs" />
     <Compile Include="FibonacciSequence.cs" />
     <Compile Include="IPrimeSequence.cs" />
+    <Compile Include="NaturalStringComparer.cs" />
     <Compile Include="PythagoreanTriples.cs" />
+    <Compile Include="Solutions\Problem10.cs" />
     <Compile Include="Solutions\Problem9.cs" />
     <Compile Include="Solutions\Problem8.cs" />
     <Compile Include="Solutions\Problem7.cs" />

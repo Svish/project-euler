@@ -19,10 +19,10 @@ namespace Problems.Solutions
             : base(31875000) { }
 
 
-        protected override long GetAnswer()
+        protected override object GetAnswer()
         {
             var t = new PythagoreanTriples().First(x => x.Item1 + x.Item2 + x.Item3 == 1000);
-            return (long)(t.Item1 * t.Item2 * t.Item3);
+            return t.Item1 * t.Item2 * t.Item3;
         }
 
 

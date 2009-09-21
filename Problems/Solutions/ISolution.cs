@@ -2,7 +2,7 @@
 {
     public interface ISolution
     {
-        long ExpectedAnswer { get; }
-        long ActualAnswer { get; }
+        object ExpectedAnswer { get; }
+        object ActualAnswer { get; }
     }
 }

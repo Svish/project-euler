@@ -15,18 +15,19 @@ namespace Problems
             ulong r = 0L;
             while (n > 0)
             {
-                r = 10*r + n%10;
+                r = 10 * r + n % 10;
                 n /= 10;
             }
             return r;
         }
 
+
         /// <summary>
-        /// Returns the lowest common multiple of two numbers.
+        /// Finds the smalles number that is divisible by the given divisors; zero if none could be found.
         /// </summary>
-        public static ulong GetLowestCommonMultiple(ulong a, ulong b)
+        public static ulong GetLowestCommonMultiple(params ulong[] divisors)
         {
-            return (a*b)/GetGreatestCommonDivisor(a, b);
+            return divisors.Aggregate(1UL, (a, b) => a / GetGreatestCommonDivisor(a, b) * b);
         }
 
 
@@ -38,7 +39,7 @@ namespace Problems
             while (b != 0)
             {
                 ulong t = b;
-                b = a%b;
+                b = a % b;
                 a = t;
             }
             return a;
@@ -59,16 +60,7 @@ namespace Problems
         /// </summary>
         public static byte GetNumberOfDigits(this ulong value)
         {
-            return (byte) value.ToString(CultureInfo.InvariantCulture).Length;
-        }
-
-
-        /// <summary>
-        /// Finds the smalles number that is divisible by the given divisors; zero if none could be found.
-        /// </summary>
-        public static ulong FindSmallestNumberDivisibleBy(params ulong[] divisors)
-        {
-            return divisors.Aggregate(1UL, GetLowestCommonMultiple);
+            return (byte)value.ToString(CultureInfo.InvariantCulture).Length;
         }
 
 
@@ -83,13 +75,13 @@ namespace Problems
 
             ulong largestPalindrome = 0;
 
-            ulong upper = (ulong) Math.Pow(10, digits) - 1;
-            ulong lower = (ulong) Math.Pow(10, digits - 1);
+            ulong upper = (ulong)Math.Pow(10, digits) - 1;
+            ulong lower = (ulong)Math.Pow(10, digits - 1);
 
             for (ulong x = upper; x >= lower; x--)
                 for (ulong y = upper; y >= lower; y--)
                 {
-                    ulong product = x*y;
+                    ulong product = x * y;
 
                     if (product > largestPalindrome && product.IsPalindrome())
                     {
@@ -110,7 +102,7 @@ namespace Problems
             if (divisors.Any(x => x == 0))
                 throw new ArgumentException("Divisors can not be zero.");
             foreach (ulong divisor in divisors)
-                if (value%divisor != 0)
+                if (value % divisor != 0)
                     return false;
             return true;
         }

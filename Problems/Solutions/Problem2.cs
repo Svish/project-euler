@@ -17,9 +17,9 @@ namespace Problems.Solutions
             : base(4613732) {}
 
 
-        protected override long GetAnswer()
+        protected override object GetAnswer()
         {
-            return (long) new FibonacciSequence()
+            return new FibonacciSequence()
                 .Where(x => x%2 == 0)
                 .TakeWhile(x => x < 4000000)
                 .Aggregate((sum, x) => sum + x);

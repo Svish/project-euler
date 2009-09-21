@@ -12,7 +12,6 @@ namespace Problems.Tests
         [TestCase((byte)2, 9009L)] // 9009 = 91 * 99
         [TestCase((byte)3, 906609)] // 906609 = 913 * 993
         [TestCase((byte)4, 99000099)] // 99000099 = 9901 * 9999
-        //[TestCase((byte)5, 0)]
         public void FindGreatestPalindromeWith_Examples_AreCorrect(byte digits, long result)
         {
             Assert.AreEqual(result, Numbers.FindLargestPalindromeMadeFromProductOf(digits));
@@ -40,10 +39,20 @@ namespace Problems.Tests
         [TestCase(2UL, new ulong[] { 2 })]
         [TestCase(6UL, new ulong[] { 2, 3 })]
         [TestCase(10UL, new ulong[] { 2, 5 })]
-        [TestCase(2520UL, new ulong[] { 4, 6, 7, 8, 9, 10 })]
-        public void FindSmallestNumberDivisibleBy_Examples_AreCorrect(ulong result, ulong[] divisors)
+        [TestCase(2520UL, new ulong[] { 6, 7, 8, 9, 10 })]  // 1-10, stripped down.
+        public void LowestCommonMultiple_Examples_AreCorrect(ulong result, ulong[] divisors)
         {
-            Assert.AreEqual(result, Numbers.FindSmallestNumberDivisibleBy(divisors));
+            Assert.AreEqual(result, Numbers.GetLowestCommonMultiple(divisors));
+        }
+
+        [TestCase(12UL, 15UL, Result = 60)]
+        [TestCase(18UL, 24UL, Result = 72)]
+        [TestCase(9UL, 10UL, Result = 90)]
+        [TestCase(14UL, 42UL, Result = 42)]
+        [TestCase(18UL, 30UL, Result = 90)]
+        public ulong LowestCommonMultiple_Examples_AreCorrect(ulong a, ulong b)
+        {
+            return Numbers.GetLowestCommonMultiple(a, b);
         }
 
 
@@ -57,16 +66,6 @@ namespace Problems.Tests
             return Numbers.GetGreatestCommonDivisor(a, b);
         }
 
-
-        [TestCase(12UL, 15UL, Result = 60)]
-        [TestCase(18UL, 24UL, Result = 72)]
-        [TestCase(9UL, 10UL, Result = 90)]
-        [TestCase(14UL, 42UL, Result = 42)]
-        [TestCase(18UL, 30UL, Result = 90)]
-        public ulong LowestCommonMultiple_Examples_AreCorrect(ulong a, ulong b)
-        {
-            return Numbers.GetLowestCommonMultiple(a, b);
-        }
 
 
         [TestCase(0UL, 1)]

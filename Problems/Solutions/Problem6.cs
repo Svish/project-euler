@@ -14,7 +14,7 @@ namespace Problems.Solutions
             : base(25164150) {}
 
 
-        protected override long GetAnswer()
+        protected override object GetAnswer()
         {
             var numbers = Enumerable.Range(1, 100);
 

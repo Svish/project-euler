@@ -12,20 +12,20 @@
 
 
         #region ISolution Members
-        long ISolution.ExpectedAnswer
+        object ISolution.ExpectedAnswer
         {
             get { return expectedAnswer; }
         }
 
 
-        long ISolution.ActualAnswer
+        object ISolution.ActualAnswer
         {
             get { return GetAnswer(); }
         }
         #endregion
 
 
-        protected abstract long GetAnswer();
+        protected abstract object GetAnswer();
 
         public override string ToString()
         {

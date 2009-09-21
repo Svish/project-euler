@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="EratosthenesTests.cs" />
     <Compile Include="FibonacciSequenceTests.cs" />
+    <Compile Include="NaturalStringComparerTests.cs" />
     <Compile Include="PythagoreanTriplesTests.cs" />
     <Compile Include="Solutions\SolutionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

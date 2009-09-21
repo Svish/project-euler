@@ -14,9 +14,9 @@ namespace Problems.Solutions
             : base(6857) {}
 
 
-        protected override long GetAnswer()
+        protected override object GetAnswer()
         {
-            return (long) Eratosthenes.GetPrimeFactors(600851475143).Max();
+            return Eratosthenes.GetPrimeFactors(600851475143).Max();
         }
     }
 }

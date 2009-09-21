@@ -3,6 +3,7 @@ using System.Linq;
 using NUnit.Framework;
 using Problems.Solutions;
 using System.Reflection;
+using System.Diagnostics;
 
 
 namespace Problems.Tests.Solutions
@@ -21,24 +22,29 @@ namespace Problems.Tests.Solutions
                     => x.IsClass 
                     && !x.IsAbstract 
                     && typeof(ISolution).IsAssignableFrom(x))
-                .OrderBy(x => x.FullName);
+                .OrderBy(x => x.Name, new NaturalStringComparer());
+
 
             // Test them
             foreach(var i in implementors)
             {
                 var solution = (ISolution) Activator.CreateInstance(i);
-                var start = DateTime.Now;
+
+                var watch = Stopwatch.StartNew();
 
                 var expected = solution.ExpectedAnswer;
                 var actual = solution.ActualAnswer;
 
                 Assert.AreEqual(actual, expected,
-                    string.Format("Solution of {0} is not correct", solution, Environment.NewLine));
+                    string.Format("Solution of {0} is not correct", solution));
 
-                var time = DateTime.Now - start;
-                Console.WriteLine("{0,-20}OK     {1,15:0.000}", 
+                watch.Stop();
+
+                Console.WriteLine("{0,-20}OK     {1,10} ms {2,15} ticks {3,30}", 
                     solution, 
-                    time.TotalMilliseconds);
+                    watch.ElapsedMilliseconds,
+                    watch.ElapsedTicks,
+                    actual);
             }
         }
     }

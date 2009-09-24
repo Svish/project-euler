@@ -66,7 +66,7 @@ namespace Problems
         {
             foreach (var prime in primeSequence)
             {
-                while (value%prime == 0)
+                while (value % prime == 0)
                 {
                     value /= prime;
                     yield return prime;
@@ -85,7 +85,7 @@ namespace Problems
             var sqrt = (ulong) Math.Sqrt(value);
             return !knownPrimes
                 .TakeWhile(x => x <= sqrt)
-                .Any(x => value%x == 0);
+                .Any(x => value % x == 0);
         }
     }
 }

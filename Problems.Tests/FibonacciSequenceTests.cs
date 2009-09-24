@@ -35,7 +35,7 @@ namespace Problems.Tests
             {
                 var e = (gen as IEnumerable).GetEnumerator();
 
-                int i = 0;
+                var i = 0;
                 while (i++ < 100 && g.MoveNext() && e.MoveNext())
                     Assert.AreEqual(g.Current, e.Current);
             }

@@ -27,6 +27,7 @@
 
         protected abstract object GetAnswer();
 
+
         public override string ToString()
         {
             return GetType().Name;

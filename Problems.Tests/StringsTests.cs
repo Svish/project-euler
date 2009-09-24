@@ -1,5 +1,5 @@
-using NUnit.Framework;
 using System;
+using NUnit.Framework;
 
 
 namespace Problems.Tests
@@ -18,7 +18,8 @@ namespace Problems.Tests
         {
             Assert.IsTrue(s.IsPalindrome());
         }
-        
+
+
         [TestCase(null)]
         [TestCase("")]
         [TestCase("ab")]
@@ -35,6 +36,7 @@ namespace Problems.Tests
             Assert.IsFalse(s.IsPalindrome());
         }
 
+
         [TestCase("", "")]
         [TestCase("a", "a")]
         [TestCase("ab", "ba")]
@@ -46,10 +48,11 @@ namespace Problems.Tests
             Assert.AreEqual(original.Reverse(), reverse);
         }
 
+
         [Test]
         public void Reverse_NullString_ThrowsArgumentNullException()
         {
-            Assert.That(() => Strings.Reverse(null), Throws.InstanceOf(typeof(ArgumentNullException)));
+            Assert.That(() => Strings.Reverse(null), Throws.InstanceOf(typeof (ArgumentNullException)));
         }
     }
 }

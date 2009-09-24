@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using System.Runtime.InteropServices;
 using System.Security;
+
 
 namespace Problems
 {
@@ -13,16 +13,19 @@ namespace Problems
     {
         private readonly int modifier = 1;
 
+
         public NaturalStringComparer(bool descending)
         {
             if (descending)
                 modifier = -1;
         }
 
+
         public NaturalStringComparer()
-            :this(false) {}
+            : this(false) {}
 
 
+        #region IComparer<string> Members
         /// <summary>
         /// Compares two strings and returns a value indicating 
         /// whether one is less than, equal to, or greater than the other.
@@ -32,7 +35,9 @@ namespace Problems
         {
             return SafeNativeMethods.StrCmpLogicalW(a ?? "", b ?? "") * modifier;
         }
+        #endregion
     }
+
 
     [SuppressUnmanagedCodeSecurity]
     internal static class SafeNativeMethods

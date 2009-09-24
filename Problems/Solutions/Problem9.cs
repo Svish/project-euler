@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
+﻿using System.Linq;
 
 
 namespace Problems.Solutions
@@ -17,7 +15,7 @@ namespace Problems.Solutions
     public class Problem9 : ProblemBase
     {
         public Problem9()
-            : base(31875000) { }
+            : base(31875000) {}
 
 
         protected override object GetAnswer()
@@ -26,7 +24,5 @@ namespace Problems.Solutions
                 .First(x => x.Item1 + x.Item2 + x.Item3 == 1000);
             return t.Item1 * t.Item2 * t.Item3;
         }
-
-
     }
 }

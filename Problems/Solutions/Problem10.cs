@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
+﻿using System.Linq;
 
 
 namespace Problems.Solutions
@@ -13,7 +11,7 @@ namespace Problems.Solutions
     public class Problem10 : ProblemBase
     {
         public Problem10()
-            : base(142913828922) { }
+            : base(142913828922) {}
 
 
         protected override object GetAnswer()
@@ -23,7 +21,5 @@ namespace Problems.Solutions
                 .TakeWhile(x => x < limit)
                 .Aggregate((sum, x) => sum + x);
         }
-
-
     }
 }

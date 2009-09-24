@@ -10,10 +10,10 @@ namespace Problems
             if (text == null)
                 throw new ArgumentNullException("text");
 
-            int length = text.Length;
+            var length = text.Length;
             var arr = new char[length];
 
-            for (int i = 0; i < length; i++)
+            for (var i = 0; i < length; i++)
                 arr[i] = text[length - 1 - i];
 
             return new string(arr);
@@ -27,10 +27,10 @@ namespace Problems
 
             var c = text.ToCharArray();
 
-            int length = text.Length;
-            int halfLength = length / 2;
+            var length = text.Length;
+            var halfLength = length / 2;
 
-            for (int i = 0; i < halfLength; i++)
+            for (var i = 0; i < halfLength; i++)
             {
                 if (c[i] != c[length - 1 - i])
                     return false;

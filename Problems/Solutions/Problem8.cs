@@ -36,7 +36,7 @@ namespace Problems.Solutions
 
         protected override object GetAnswer()
         {
-            var digits = ("73167176531330624919225119674426574742355349194934"
+            var d = ("73167176531330624919225119674426574742355349194934"
                         + "96983520312774506326239578318016984801869478851843"
                         + "85861560789112949495459501737958331952853208805511"
                         + "12540698747158523863050715693290963295227443043557"
@@ -61,13 +61,9 @@ namespace Problems.Solutions
 
             var maxProduct = 0UL;
 
-            for (int i = 0; i < digits.Length - 4; i++)
+            for (var i = 0; i < d.Length - 4; i++)
             {
-                var product = digits[i] 
-                    * digits[i + 1] 
-                    * digits[i + 2] 
-                    * digits[i + 3] 
-                    * digits[i + 4];
+                var product = d[i] * d[i + 1] * d[i + 2] * d[i + 3] * d[i + 4];
 
                 if (product > maxProduct)
                     maxProduct = product;

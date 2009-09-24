@@ -78,8 +78,8 @@ namespace Problems.Tests
             using (var g = gen.GetEnumerator())
             {
                 var e = (gen as IEnumerable).GetEnumerator();
-                
-                int i = 0;
+
+                var i = 0;
                 while (i++ < 50 && g.MoveNext() && e.MoveNext())
                     Assert.AreEqual(g.Current, e.Current);
             }

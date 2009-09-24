@@ -19,6 +19,22 @@ namespace Problems.Tests
         }
 
 
+        [TestCase(13195UL, 29UL)] // The prime factors of 13195 are 5, 7, 13 and 29.
+        public void GetPrimeFactors_LargestPrimeFactorOfExample_IsCorrect(ulong value, ulong largestPrime)
+        {
+            Assert.AreEqual(largestPrime, Eratosthenes.GetPrimeFactors(value).Max());
+        }
+
+
+        [TestCase(12UL, new ulong[] {2, 2, 3})]
+        [TestCase(15UL, new ulong[] {3, 5})]
+        [TestCase(120UL, new ulong[] {2, 2, 2, 3, 5})]
+        public void GetPrimeFactors_Examples_AreCorrect(ulong value, ulong[] primeFactors)
+        {
+            CollectionAssert.AreEquivalent(primeFactors, Eratosthenes.GetPrimeFactors(value).ToArray());
+        }
+
+
         [Test]
         public void GetEnumerator_FirstFiveHundredNumbers_AreCorrect()
         {
@@ -72,7 +88,7 @@ namespace Problems.Tests
             {
                 var e = (gen as IEnumerable).GetEnumerator();
 
-                int i = 0;
+                var i = 0;
                 while (i++ < 100 && g.MoveNext() && e.MoveNext())
                     Assert.AreEqual(g.Current, e.Current);
             }
@@ -88,21 +104,6 @@ namespace Problems.Tests
             var b = gen.Take(100).ToArray();
 
             CollectionAssert.AreEqual(a, b);
-        }
-
-        [TestCase(13195UL, 29UL)] // The prime factors of 13195 are 5, 7, 13 and 29.
-        public void GetPrimeFactors_LargestPrimeFactorOfExample_IsCorrect(ulong value, ulong largestPrime)
-        {
-            Assert.AreEqual(largestPrime, Eratosthenes.GetPrimeFactors(value).Max());
-        }
-
-
-        [TestCase(12UL, new ulong[] { 2, 2, 3 })]
-        [TestCase(15UL, new ulong[] { 3, 5 })]
-        [TestCase(120UL, new ulong[] { 2, 2, 2, 3, 5 })]
-        public void GetPrimeFactors_Examples_AreCorrect(ulong value, ulong[] primeFactors)
-        {
-            CollectionAssert.AreEquivalent(primeFactors, Eratosthenes.GetPrimeFactors(value).ToArray());
         }
     }
 }

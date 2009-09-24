@@ -15,6 +15,7 @@ namespace Problems
             return (n * n + n) / 2;
         }
 
+
         /// <summary>
         /// Returns the sum of 1^2 + 2^2 + 3^2 + ... + n^2. (Sum n^2)
         /// </summary>
@@ -22,6 +23,7 @@ namespace Problems
         {
             return n * (n + 1) * (2 * n + 1) / 6;
         }
+
 
         /// <summary>
         /// Reverses the number.
@@ -54,7 +56,7 @@ namespace Problems
         {
             while (b != 0)
             {
-                ulong t = b;
+                var t = b;
                 b = a % b;
                 a = t;
             }
@@ -76,7 +78,7 @@ namespace Problems
         /// </summary>
         public static byte GetNumberOfDigits(this ulong value)
         {
-            return (byte)value.ToString(CultureInfo.InvariantCulture).Length;
+            return (byte) value.ToString(CultureInfo.InvariantCulture).Length;
         }
 
 
@@ -91,13 +93,13 @@ namespace Problems
 
             ulong largestPalindrome = 0;
 
-            ulong upper = (ulong)Math.Pow(10, digits) - 1;
-            ulong lower = (ulong)Math.Pow(10, digits - 1);
+            var upper = (ulong) Math.Pow(10, digits) - 1;
+            var lower = (ulong) Math.Pow(10, digits - 1);
 
-            for (ulong x = upper; x >= lower; x--)
-                for (ulong y = upper; y >= lower; y--)
+            for (var x = upper; x >= lower; x--)
+                for (var y = upper; y >= lower; y--)
                 {
-                    ulong product = x * y;
+                    var product = x * y;
 
                     if (product > largestPalindrome && product.IsPalindrome())
                     {
@@ -117,7 +119,7 @@ namespace Problems
         {
             if (divisors.Any(x => x == 0))
                 throw new ArgumentException("Divisors can not be zero.");
-            foreach (ulong divisor in divisors)
+            foreach (var divisor in divisors)
                 if (value % divisor != 0)
                     return false;
             return true;

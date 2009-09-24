@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-
-
-namespace Problems.Solutions
+﻿namespace Problems.Solutions
 {
     /// <summary>
     /// The sum of the squares of the first ten natural numbers is,
@@ -20,7 +16,7 @@ namespace Problems.Solutions
     public class Problem6 : ProblemBase
     {
         public Problem6()
-            : base(25164150) { }
+            : base(25164150) {}
 
 
         protected override object GetAnswer()

@@ -9,7 +9,7 @@ namespace Problems
     /// </summary>
     public class FibonacciSequence : IEnumerable<ulong>
     {
-        #region IFibonacciSequence Members
+        #region IEnumerable<ulong> Members
         public IEnumerator<ulong> GetEnumerator()
         {
             var a = 0UL;

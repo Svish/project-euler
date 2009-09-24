@@ -1,5 +1,5 @@
-using NUnit.Framework;
 using System.Linq;
+using NUnit.Framework;
 
 
 namespace Problems.Tests
@@ -53,15 +53,16 @@ namespace Problems.Tests
         {
             var unsorted = new[] {"rfc1.txt", "rfc822.txt", "rfc2086.txt"};
             var sorted = new[] {"rfc1.txt", "rfc822.txt", "rfc2086.txt"};
-            
+
             CollectionAssert.AreEqual(sorted, unsorted.OrderBy(x => x, new NaturalStringComparer()));
         }
+
 
         [Test]
         public void Ctor_DecendingSort()
         {
-            var unsorted = new[] { "rfc1.txt", "rfc822.txt", "rfc2086.txt" };
-            var sorted = new[] { "rfc2086.txt", "rfc822.txt", "rfc1.txt"};
+            var unsorted = new[] {"rfc1.txt", "rfc822.txt", "rfc2086.txt"};
+            var sorted = new[] {"rfc2086.txt", "rfc822.txt", "rfc1.txt"};
 
             CollectionAssert.AreEqual(sorted, unsorted.OrderBy(x => x, new NaturalStringComparer(true)));
         }

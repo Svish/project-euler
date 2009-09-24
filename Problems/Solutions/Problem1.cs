@@ -19,7 +19,7 @@ namespace Problems.Solutions
             var multiples = new long[] {3, 5};
             return Enumerable
                 .Range(0, 1000)
-                .Where(x => multiples.Any(y => x%y == 0))
+                .Where(x => multiples.Any(y => x % y == 0))
                 .Sum();
         }
     }

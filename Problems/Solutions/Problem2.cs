@@ -20,7 +20,7 @@ namespace Problems.Solutions
         protected override object GetAnswer()
         {
             return new FibonacciSequence()
-                .Where(x => x%2 == 0)
+                .Where(x => x % 2 == 0)
                 .TakeWhile(x => x < 4000000)
                 .Aggregate((sum, x) => sum + x);
         }

@@ -7,43 +7,39 @@ namespace Problems.Tests
     [TestFixture]
     public class NumbersTests
     {
-        [TestCase((byte)0, 0L)] // 0 * 0 = 0
-        [TestCase((byte)1, 9L)] // 9 = 1 * 9
-        [TestCase((byte)2, 9009L)] // 9009 = 91 * 99
-        [TestCase((byte)3, 906609)] // 906609 = 913 * 993
-        [TestCase((byte)4, 99000099)] // 99000099 = 9901 * 9999
+        [TestCase((byte) 0, 0L)] // 0 * 0 = 0
+        [TestCase((byte) 1, 9L)] // 9 = 1 * 9
+        [TestCase((byte) 2, 9009L)] // 9009 = 91 * 99
+        [TestCase((byte) 3, 906609)] // 906609 = 913 * 993
+        [TestCase((byte) 4, 99000099)] // 99000099 = 9901 * 9999
         public void FindGreatestPalindromeWith_Examples_AreCorrect(byte digits, long result)
         {
             Assert.AreEqual(result, Numbers.FindLargestPalindromeMadeFromProductOf(digits));
         }
 
 
-        [Test]
-        public void IsEvenlyDivisibleBy_Zero_ThrowsException()
-        {
-            Assert.That(() => 5UL.IsEvenlyDivisibleBy(0), Throws.ArgumentException);
-        }
-
-        [TestCase(true, 5UL, new ulong[] { 5 })]
-        [TestCase(true, 6UL, new ulong[] { 2, 3 })]
-        [TestCase(false, 8UL, new ulong[] { 2, 3 })]
-        [TestCase(true, 10UL, new ulong[] { 10, 5, 2 })]
-        [TestCase(false, 10UL, new ulong[] { 10, 5, 3 })]
+        [TestCase(true, 5UL, new ulong[] {5})]
+        [TestCase(true, 6UL, new ulong[] {2, 3})]
+        [TestCase(false, 8UL, new ulong[] {2, 3})]
+        [TestCase(true, 10UL, new ulong[] {10, 5, 2})]
+        [TestCase(false, 10UL, new ulong[] {10, 5, 3})]
         public void IsEvenlyDivisibleBy_Examples_AreCorrect(bool result, ulong value, ulong[] divisors)
         {
             Assert.AreEqual(result, value.IsEvenlyDivisibleBy(divisors),
                 string.Format("{0} % {1}", value, string.Join(", ", divisors.Select(x => x.ToString()).ToArray())));
         }
 
-        [TestCase(1UL, new ulong[] { 1 })]
-        [TestCase(2UL, new ulong[] { 2 })]
-        [TestCase(6UL, new ulong[] { 2, 3 })]
-        [TestCase(10UL, new ulong[] { 2, 5 })]
-        [TestCase(2520UL, new ulong[] { 6, 7, 8, 9, 10 })]  // 1-10, stripped down.
+
+        [TestCase(1UL, new ulong[] {1})]
+        [TestCase(2UL, new ulong[] {2})]
+        [TestCase(6UL, new ulong[] {2, 3})]
+        [TestCase(10UL, new ulong[] {2, 5})]
+        [TestCase(2520UL, new ulong[] {6, 7, 8, 9, 10})] // 1-10, stripped down.
         public void LowestCommonMultiple_Examples_AreCorrect(ulong result, ulong[] divisors)
         {
             Assert.AreEqual(result, Numbers.GetLowestCommonMultiple(divisors));
         }
+
 
         [TestCase(12UL, 15UL, Result = 60)]
         [TestCase(18UL, 24UL, Result = 72)]
@@ -65,7 +61,6 @@ namespace Problems.Tests
         {
             return Numbers.GetGreatestCommonDivisor(a, b);
         }
-
 
 
         [TestCase(0UL, 1)]
@@ -130,6 +125,7 @@ namespace Problems.Tests
             Assert.IsFalse(value.IsPalindrome());
         }
 
+
         [TestCase(1UL, Result = 1)]
         [TestCase(2UL, Result = 1 + 2)]
         [TestCase(10UL, Result = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)]
@@ -138,12 +134,20 @@ namespace Problems.Tests
             return Numbers.SumExpansionK1(n);
         }
 
+
         [TestCase(1UL, Result = 1)]
         [TestCase(2UL, Result = 1 + 4)]
         [TestCase(10UL, Result = 1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100)]
         public ulong SumExpansionK2(ulong n)
         {
             return Numbers.SumExpansionK2(n);
+        }
+
+
+        [Test]
+        public void IsEvenlyDivisibleBy_Zero_ThrowsException()
+        {
+            Assert.That(() => 5UL.IsEvenlyDivisibleBy(0), Throws.ArgumentException);
         }
     }
 }

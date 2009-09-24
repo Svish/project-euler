@@ -27,16 +27,7 @@ namespace Problems.Solutions
         {
             const ulong n = 100;
             return (3 * n * n * n * n + 2 * n * n * n - 3 * n * n - 2 * n) / 12;
-
-            return Numbers.SumExpansionK1(n)
-                * Numbers.SumExpansionK1(n)
-                - Numbers.SumExpansionK2(n);
-        }
-
-        public static ulong test()
-        {
-            const ulong n = 100;
-            return (3*n*n*n*n + 2*n*n*n - 3*n*n - 2*n) / 12;
+            //return Numbers.SumExpansionK1(n) * Numbers.SumExpansionK1(n) - Numbers.SumExpansionK2(n);
         }
     }
 }

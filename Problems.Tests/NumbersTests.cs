@@ -129,5 +129,21 @@ namespace Problems.Tests
         {
             Assert.IsFalse(value.IsPalindrome());
         }
+
+        [TestCase(1UL, Result = 1)]
+        [TestCase(2UL, Result = 1 + 2)]
+        [TestCase(10UL, Result = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10)]
+        public ulong SumExpansionK1(ulong n)
+        {
+            return Numbers.SumExpansionK1(n);
+        }
+
+        [TestCase(1UL, Result = 1)]
+        [TestCase(2UL, Result = 1 + 4)]
+        [TestCase(10UL, Result = 1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100)]
+        public ulong SumExpansionK2(ulong n)
+        {
+            return Numbers.SumExpansionK2(n);
+        }
     }
 }

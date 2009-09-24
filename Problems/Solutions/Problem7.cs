@@ -4,9 +4,10 @@
 namespace Problems.Solutions
 {
     /// <summary>
-    /// 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
-    ///
-    /// What is the smallest number that is evenly divisible by all of the numbers from 1 to 20?
+    /// By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13,
+    /// we can see that the 6th prime is 13.
+    /// 
+    /// What is the 10001st prime number?
     /// </summary>
     public class Problem7 : ProblemBase
     {

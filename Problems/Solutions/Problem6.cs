@@ -1,26 +1,42 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 
 namespace Problems.Solutions
 {
     /// <summary>
-    /// 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
-    ///
-    /// What is the smallest number that is evenly divisible by all of the numbers from 1 to 20?
+    /// The sum of the squares of the first ten natural numbers is,
+    /// 1^2 + 2^2 + ... + 10^2 = 385
+    /// 
+    /// The square of the sum of the first ten natural numbers is,
+    /// (1 + 2 + ... + 10)^2 = 55^2 = 3025
+    /// 
+    /// Hence the difference between the sum of the squares of the first 
+    /// ten natural numbers and the square of the sum is 3025 * 385 = 2640.
+    /// 
+    /// Find the difference between the sum of the squares of the first 
+    /// one hundred natural numbers and the square of the sum.
     /// </summary>
     public class Problem6 : ProblemBase
     {
         public Problem6()
-            : base(25164150) {}
+            : base(25164150) { }
 
 
         protected override object GetAnswer()
         {
-            var numbers = Enumerable.Range(1, 100);
+            const ulong n = 100;
+            return (3 * n * n * n * n + 2 * n * n * n - 3 * n * n - 2 * n) / 12;
 
-            int a = numbers.Aggregate(0, (sum, x) => sum + x*x);
-            int b = numbers.Sum()*numbers.Sum();
-            return b - a;
+            return Numbers.SumExpansionK1(n)
+                * Numbers.SumExpansionK1(n)
+                - Numbers.SumExpansionK2(n);
+        }
+
+        public static ulong test()
+        {
+            const ulong n = 100;
+            return (3*n*n*n*n + 2*n*n*n - 3*n*n - 2*n) / 12;
         }
     }
 }

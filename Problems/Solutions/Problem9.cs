@@ -22,7 +22,8 @@ namespace Problems.Solutions
 
         protected override object GetAnswer()
         {
-            var t = new PythagoreanTriples().First(x => x.Item1 + x.Item2 + x.Item3 == 1000);
+            var t = new PythagoreanTriples()
+                .First(x => x.Item1 + x.Item2 + x.Item3 == 1000);
             return t.Item1 * t.Item2 * t.Item3;
         }
 

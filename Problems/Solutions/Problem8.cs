@@ -30,13 +30,14 @@ namespace Problems.Solutions
     /// </summary>
     public class Problem8 : ProblemBase
     {
+        private readonly ulong[] digits;
+
+
         public Problem8()
-            : base(40824) { }
-
-
-        protected override object GetAnswer()
+            : base(40824)
         {
-            var d = ("73167176531330624919225119674426574742355349194934"
+
+            digits = ("73167176531330624919225119674426574742355349194934"
                     + "96983520312774506326239578318016984801869478851843"
                     + "85861560789112949495459501737958331952853208805511"
                     + "12540698747158523863050715693290963295227443043557"
@@ -58,11 +59,19 @@ namespace Problems.Solutions
                     + "71636269561882670428252483600823257530420752963450")
                 .Select(x => Convert.ToUInt64(x.ToString()))
                 .ToArray();
+        }
 
+
+        protected override object GetAnswer()
+        {
+            var d = digits;
             var maxProduct = 0UL;
 
             for (var i = 0; i < d.Length - 4; i++)
             {
+                //if (d[i] == 0 || d[i + 1] == 0 || d[i + 2] == 0 || d[i + 3] == 0 || d[i + 4] == 0)
+                //    continue;
+
                 var product = d[i] * d[i + 1] * d[i + 2] * d[i + 3] * d[i + 4];
 
                 if (product > maxProduct)

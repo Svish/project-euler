@@ -7,12 +7,15 @@ using System.Linq;
 namespace Problems
 {
     /// <summary>
-    /// Generates prime numbers by using a variation upon the Sieve of Eratosthenes algorithm.
+    /// Generates prime numbers by using a variation upon the 
+    /// Sieve of Eratosthenes algorithm.
     /// </summary>
-    // http://www.blackwasp.co.uk/Eratosthenes.aspx
-    // http://www.blackwasp.co.uk/PrimeFactors.aspx
+    /// <remarks>The <see cref="GetEnumerator()"/> method never returns.</remarks>
     public class Eratosthenes : IPrimeSequence
     {
+        // http://www.blackwasp.co.uk/Eratosthenes.aspx
+        // http://www.blackwasp.co.uk/PrimeFactors.aspx
+
         private readonly List<ulong> knownPrimes;
 
 
@@ -51,7 +54,8 @@ namespace Problems
 
 
         /// <summary>
-        /// Returns the prime factors of the given number. Uses an instance of <see cref="Eratosthenes"/> for <see cref="IPrimeSequence"/>.
+        /// Returns the prime factors of the given number. 
+        /// Uses an instance of <see cref="Eratosthenes"/> for <see cref="IPrimeSequence"/>.
         /// </summary>
         public static IEnumerable<ulong> GetPrimeFactors(ulong value)
         {

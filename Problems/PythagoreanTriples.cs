@@ -5,6 +5,10 @@ using Lokad;
 
 namespace Problems
 {
+    /// <summary>
+    /// Generates Pythagorean triplets.
+    /// </summary>
+    /// <remarks>The <see cref="GetEnumerator()"/> method never returns.</remarks>
     public class PythagoreanTriples : IEnumerable<Triple<ulong, ulong, ulong>>
     {
         #region IEnumerable<Triple<ulong,ulong,ulong>> Members

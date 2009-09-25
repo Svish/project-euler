@@ -7,6 +7,7 @@ namespace Problems
     /// <summary>
     /// Generates the Fibonacci sequence, starting with 1, 1, 2, 3, 5 and so on.
     /// </summary>
+    /// <remarks>The <see cref="GetEnumerator()"/> method never returns.</remarks>
     public class FibonacciSequence : IEnumerable<ulong>
     {
         #region IEnumerable<ulong> Members

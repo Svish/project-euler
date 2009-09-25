@@ -18,7 +18,6 @@ namespace Problems
 
         private readonly List<ulong> knownPrimes;
 
-
         /// <summary>
         /// Initializes a new <see cref="Eratosthenes"/> prime number generator.
         /// </summary>

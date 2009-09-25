@@ -12,13 +12,13 @@
 
 
         #region ISolution Members
-        object ISolution.ExpectedAnswer
+        object ISolution.Answer
         {
             get { return expectedAnswer; }
         }
 
 
-        object ISolution.ActualAnswer
+        object ISolution.CalculatedAnswer
         {
             get { return GetAnswer(); }
         }

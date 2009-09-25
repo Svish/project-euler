@@ -32,8 +32,8 @@ namespace Problems.Tests.Solutions
 
                 var watch = Stopwatch.StartNew();
 
-                var expected = solution.ExpectedAnswer;
-                var actual = solution.ActualAnswer;
+                var expected = solution.Answer;
+                var actual = solution.CalculatedAnswer;
 
                 Assert.AreEqual(actual, expected,
                     string.Format("Solution of {0} is not correct", solution));

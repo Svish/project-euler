@@ -8,9 +8,9 @@ namespace Problems.Solutions
     /// 
     /// Find the sum of all the primes below two million.
     /// </summary>
-    public class Problem10 : ProblemBase
+    public class Problem010 : ProblemBase
     {
-        public Problem10()
+        public Problem010()
             : base(142913828922) {}
 
 

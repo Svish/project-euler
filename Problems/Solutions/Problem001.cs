@@ -8,9 +8,9 @@ namespace Problems.Solutions
     /// 
     /// Find the sum of all the multiples of 3 or 5 below 1000.
     /// </summary>
-    public class Problem1 : ProblemBase
+    public class Problem001 : ProblemBase
     {
-        public Problem1()
+        public Problem001()
             : base(233168) {}
 
 

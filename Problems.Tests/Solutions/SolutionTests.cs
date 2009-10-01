@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -11,31 +12,29 @@ namespace Problems.Tests.Solutions
     [TestFixture]
     public class SolutionTests
     {
-        [Test]
-        public void GetAnswer_AllImplementors_ReturnsExpectedAnswer()
+        private static IEnumerable<ISolution> GetSolutions()
         {
             // Find implementors
-            var implementors = Assembly
-                .GetAssembly(typeof (ISolution))
+            return Assembly
+                .GetAssembly(typeof(ISolution))
                 .GetTypes()
-                .Where(x
-                    => x.IsClass
-                        && !x.IsAbstract
-                            && typeof (ISolution).IsAssignableFrom(x))
-                .OrderBy(x => x.Name, new NaturalStringComparer());
+                .Where(x => x.IsClass
+                         && !x.IsAbstract
+                         && typeof(ISolution).IsAssignableFrom(x))
+                .OrderBy(x => x.Name, new NaturalStringComparer())
+                .Select(x => (ISolution)Activator.CreateInstance(x));
+        }
 
-
-            // Test them
-            foreach (var i in implementors)
+        [Test]
+        public void AllSolutions_ReturnExpectedAnswer()
+        {
+            foreach (var solution in GetSolutions())
             {
-                var solution = (ISolution) Activator.CreateInstance(i);
-
                 var watch = Stopwatch.StartNew();
 
-                var expected = solution.Answer;
                 var actual = solution.CalculatedAnswer;
 
-                Assert.AreEqual(actual, expected,
+                Assert.AreEqual(solution.Answer, actual,
                     string.Format("Solution of {0} is not correct", solution));
 
                 watch.Stop();

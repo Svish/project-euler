@@ -8,9 +8,9 @@ namespace Problems.Solutions
     /// 
     /// What is the largest prime factor of the number 600851475143 ?
     /// </summary>
-    public class Problem3 : ProblemBase
+    public class Problem003 : ProblemBase
     {
-        public Problem3()
+        public Problem003()
             : base(6857) {}
 
 

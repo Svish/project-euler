@@ -5,9 +5,9 @@
     ///
     /// What is the smallest number that is evenly divisible by all of the numbers from 1 to 20?
     /// </summary>
-    public class Problem5 : ProblemBase
+    public class Problem005 : ProblemBase
     {
-        public Problem5()
+        public Problem005()
             : base(232792560) {}
 
 

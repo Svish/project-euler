@@ -47,6 +47,7 @@
     <Compile Include="NaturalStringComparer.cs" />
     <Compile Include="PythagoreanTriples.cs" />
     <Compile Include="Solutions\Problem10.cs" />
+    <Compile Include="Solutions\Problem11.cs" />
     <Compile Include="Solutions\Problem9.cs" />
     <Compile Include="Solutions\Problem8.cs" />
     <Compile Include="Solutions\Problem7.cs" />

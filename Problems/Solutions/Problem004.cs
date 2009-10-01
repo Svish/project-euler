@@ -6,9 +6,9 @@
     ///
     /// Find the largest palindrome made from the product of two 3-digit numbers.
     /// </summary>
-    public class Problem4 : ProblemBase
+    public class Problem004 : ProblemBase
     {
-        public Problem4()
+        public Problem004()
             : base(906609) {}
 
 

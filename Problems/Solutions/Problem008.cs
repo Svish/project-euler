@@ -28,12 +28,12 @@ namespace Problems.Solutions
     /// 05886116467109405077541002256983155200055935729725
     /// 71636269561882670428252483600823257530420752963450
     /// </summary>
-    public class Problem8 : ProblemBase
+    public class Problem008 : ProblemBase
     {
         private readonly ulong[] digits;
 
 
-        public Problem8()
+        public Problem008()
             : base(40824)
         {
 

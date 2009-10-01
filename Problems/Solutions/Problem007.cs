@@ -9,9 +9,9 @@ namespace Problems.Solutions
     /// 
     /// What is the 10001st prime number?
     /// </summary>
-    public class Problem7 : ProblemBase
+    public class Problem007 : ProblemBase
     {
-        public Problem7()
+        public Problem007()
             : base(104743) {}
 
 

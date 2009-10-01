@@ -11,9 +11,9 @@ namespace Problems.Solutions
     /// 
     /// Find the sum of all the even-valued terms in the sequence which do not exceed four million.
     /// </summary>
-    public class Problem2 : ProblemBase
+    public class Problem002 : ProblemBase
     {
-        public Problem2()
+        public Problem002()
             : base(4613732) {}
 
 

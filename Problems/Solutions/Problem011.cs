@@ -7,12 +7,12 @@ namespace Problems.Solutions
     /// What is the greatest product of four adjacent numbers in any 
     /// direction (up, down, left, right, or diagonally) in the 20x20 grid?
     /// </summary>
-    public class Problem11 : ProblemBase
+    public class Problem011 : ProblemBase
     {
         private readonly int[,] grid;
 
 
-        public Problem11()
+        public Problem011()
             : base(70600674)
         {
             grid = new[,]

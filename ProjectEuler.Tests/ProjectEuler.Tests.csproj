@@ -55,9 +55,9 @@
     <Compile Include="StringsTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Problems\Problems.csproj">
+    <ProjectReference Include="..\ProjectEuler\ProjectEuler.csproj">
       <Project>{4B8DB562-9776-4C45-8A56-C17779EDEC66}</Project>
-      <Name>Problems</Name>
+      <Name>ProjectEuler</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

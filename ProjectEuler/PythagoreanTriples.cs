@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Lokad;
 
 
-namespace Problems
+namespace ProjectEuler
 {
     /// <summary>
     /// Generates Pythagorean triplets.

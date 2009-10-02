@@ -1,4 +1,4 @@
-﻿namespace Problems.Solutions
+﻿namespace ProjectEuler.Problems
 {
     /// <summary>
     /// A palindromic number reads the same both ways. 
@@ -6,13 +6,16 @@
     ///
     /// Find the largest palindrome made from the product of two 3-digit numbers.
     /// </summary>
-    public class Problem004 : ProblemBase
+    public class Problem004 : ProblemBase<ulong>
     {
         public Problem004()
-            : base(906609) {}
+            : base(906609)
+        {
+            AddSolution(Solution);
+        }
 
 
-        protected override object GetAnswer()
+        private static ulong Solution()
         {
             return Numbers.FindLargestPalindromeMadeFromProductOf(3);
         }

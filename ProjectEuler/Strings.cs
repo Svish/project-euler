@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Problems
+namespace ProjectEuler
 {
     public static class Strings
     {

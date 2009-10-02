@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 
-namespace Problems
+namespace ProjectEuler
 {
     /// <summary>
     /// Generates a sequence of prime numbers, starting with 2, 3, 5 and so on.

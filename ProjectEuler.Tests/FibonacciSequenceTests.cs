@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Linq;
 using NUnit.Framework;
+using ProjectEuler.Tests.TestExtensions;
 
 
-namespace Problems.Tests
+namespace ProjectEuler.Tests
 {
     [TestFixture]
     public class FibonacciSequenceTests
@@ -11,34 +12,18 @@ namespace Problems.Tests
         [Test]
         public void GetEnumerator_EulerExample_IsCorrectSequence()
         {
-            var sequence = new FibonacciSequence();
-            var result = sequence.Skip(1).Take(10).ToArray();
-            CollectionAssert.AreEqual(result, new[] {1, 2, 3, 5, 8, 13, 21, 34, 55, 89});
+            var actual = new FibonacciSequence().Skip(1).Take(10).ToArray();
+            var expected = new[] {1, 2, 3, 5, 8, 13, 21, 34, 55, 89};
+            CollectionAssert.AreEqual(expected, actual);
         }
 
 
         [Test]
         public void GetEnumerator_FirstFifteenNumbers_AreCorrect()
         {
-            var sequence = new FibonacciSequence();
-            var result = sequence.Take(15).ToArray();
-            CollectionAssert.AreEqual(result, new[] {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610});
-        }
-
-
-        [Test]
-        public void GetEnumerator_GenericAndNonGeneric_FirstHundredAreTheSame()
-        {
-            var gen = new FibonacciSequence();
-
-            using (var g = gen.GetEnumerator())
-            {
-                var e = (gen as IEnumerable).GetEnumerator();
-
-                var i = 0;
-                while (i++ < 100 && g.MoveNext() && e.MoveNext())
-                    Assert.AreEqual(g.Current, e.Current);
-            }
+            var actual = (new FibonacciSequence() as IEnumerable).Take(15);
+            var expected = new[] {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610};
+            CollectionAssert.AreEqual(expected, actual);
         }
     }
 }

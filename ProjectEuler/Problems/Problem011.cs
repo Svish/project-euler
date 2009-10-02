@@ -1,21 +1,17 @@
-﻿using System;
-
-
-namespace Problems.Solutions
+﻿namespace ProjectEuler.Problems
 {
     /// <summary>
     /// What is the greatest product of four adjacent numbers in any 
     /// direction (up, down, left, right, or diagonally) in the 20x20 grid?
     /// </summary>
-    public class Problem011 : ProblemBase
+    public class Problem011 : ProblemBase<int>
     {
-        private readonly int[,] grid;
+        private static readonly int[,] Grid;
 
 
-        public Problem011()
-            : base(70600674)
+        static Problem011()
         {
-            grid = new[,]
+            Grid = new[,]
                 {
                     {08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08},
                     {49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00},
@@ -41,10 +37,17 @@ namespace Problems.Solutions
         }
 
 
-        protected override object GetAnswer()
+        public Problem011()
+            : base(70600674)
         {
-            var rows = grid.GetLength(0);
-            var columns = grid.GetLength(1);
+            AddSolution(GetAnswer);
+        }
+
+
+        private static int GetAnswer()
+        {
+            var rows = Grid.GetLength(0);
+            var columns = Grid.GetLength(1);
 
             var greatest = 0;
 
@@ -54,25 +57,25 @@ namespace Problems.Solutions
                     if (c < columns - 3)
                     {
                         // Right and "Left"
-                        if (greatest < grid[r, c] * grid[r, c + 1] * grid[r, c + 2] * grid[r, c + 3])
-                            greatest = grid[r, c] * grid[r, c + 1] * grid[r, c + 2] * grid[r, c + 3];
+                        if (greatest < Grid[r, c] * Grid[r, c + 1] * Grid[r, c + 2] * Grid[r, c + 3])
+                            greatest = Grid[r, c] * Grid[r, c + 1] * Grid[r, c + 2] * Grid[r, c + 3];
                     }
 
                     if (r < rows - 3)
                     {
                         // Down and "Up"
-                        if (greatest < grid[r, c] * grid[r + 1, c] * grid[r + 2, c] * grid[r + 3, c])
-                            greatest = grid[r, c] * grid[r + 1, c] * grid[r + 2, c] * grid[r + 3, c];
+                        if (greatest < Grid[r, c] * Grid[r + 1, c] * Grid[r + 2, c] * Grid[r + 3, c])
+                            greatest = Grid[r, c] * Grid[r + 1, c] * Grid[r + 2, c] * Grid[r + 3, c];
 
                         // Diagonally, down to the right
                         if (c < columns - 3)
-                            if (greatest < grid[r, c] * grid[r + 1, c + 1] * grid[r + 2, c + 2] * grid[r + 3, c + 3])
-                                greatest = grid[r, c] * grid[r + 1, c + 1] * grid[r + 2, c + 2] * grid[r + 3, c + 3];
+                            if (greatest < Grid[r, c] * Grid[r + 1, c + 1] * Grid[r + 2, c + 2] * Grid[r + 3, c + 3])
+                                greatest = Grid[r, c] * Grid[r + 1, c + 1] * Grid[r + 2, c + 2] * Grid[r + 3, c + 3];
 
                         // Diagonally, down to the left
                         if (c > 3)
-                            if (greatest < grid[r, c] * grid[r + 1, c - 1] * grid[r + 2, c - 2] * grid[r + 3, c - 3])
-                                greatest = grid[r, c] * grid[r + 1, c - 1] * grid[r + 2, c - 2] * grid[r + 3, c - 3];
+                            if (greatest < Grid[r, c] * Grid[r + 1, c - 1] * Grid[r + 2, c - 2] * Grid[r + 3, c - 3])
+                                greatest = Grid[r, c] * Grid[r + 1, c - 1] * Grid[r + 2, c - 2] * Grid[r + 3, c - 3];
                     }
                 }
 

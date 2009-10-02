@@ -1,4 +1,4 @@
-﻿namespace Problems.Solutions
+﻿namespace ProjectEuler.Problems
 {
     /// <summary>
     /// The sum of the squares of the first ten natural numbers is,
@@ -13,17 +13,25 @@
     /// Find the difference between the sum of the squares of the first 
     /// one hundred natural numbers and the square of the sum.
     /// </summary>
-    public class Problem006 : ProblemBase
+    public class Problem006 : ProblemBase<ulong>
     {
         public Problem006()
-            : base(25164150) {}
-
-
-        protected override object GetAnswer()
+            : base(25164150)
         {
-            const ulong n = 100;
-            return (3 * n * n * n * n + 2 * n * n * n - 3 * n * n - 2 * n) / 12;
-            //return Numbers.SumExpansionK1(n) * Numbers.SumExpansionK1(n) - Numbers.SumExpansionK2(n);
+            AddSolution(First);
+            AddSolution(Second, "Optimized version");
+        }
+
+        const ulong N = 100;
+
+        private static ulong First()
+        {
+            return Numbers.SumExpansionK1(N) * Numbers.SumExpansionK1(N) - Numbers.SumExpansionK2(N);
+        }
+
+        private static ulong Second()
+        {
+            return (3 * N * N * N * N + 2 * N * N * N - 3 * N * N - 2 * N) / 12;
         }
     }
 }

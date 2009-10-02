@@ -1,8 +1,8 @@
-﻿namespace Problems.Solutions
+namespace ProjectEuler.Problems
 {
     public interface ISolution
     {
-        object Answer { get; }
-        object CalculatedAnswer { get; }
+        string Note { get; }
+        object GetAnswer();
     }
 }

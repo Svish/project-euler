@@ -2,7 +2,7 @@ using System;
 using NUnit.Framework;
 
 
-namespace Problems.Tests
+namespace ProjectEuler.Tests
 {
     [TestFixture]
     public class StringsTests

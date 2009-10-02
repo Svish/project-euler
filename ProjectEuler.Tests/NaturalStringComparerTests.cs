@@ -2,7 +2,7 @@ using System.Linq;
 using NUnit.Framework;
 
 
-namespace Problems.Tests
+namespace ProjectEuler.Tests
 {
     [TestFixture]
     public class NaturalStringComparerTests

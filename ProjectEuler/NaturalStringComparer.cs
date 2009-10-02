@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using System.Security;
 
 
-namespace Problems
+namespace ProjectEuler
 {
     /// <summary>
     /// A natural string comparerer. The comparisson is done using the

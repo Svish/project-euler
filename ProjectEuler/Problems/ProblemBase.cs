@@ -1,31 +1,47 @@
-﻿namespace Problems.Solutions
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+
+namespace ProjectEuler.Problems
 {
-    public abstract class ProblemBase : ISolution
+    public abstract class ProblemBase<TAnswer> : IProblem
     {
-        private readonly long expectedAnswer;
+        private readonly TAnswer answer;
+        private readonly List<ISolution> solutions;
 
 
-        protected ProblemBase(long expectedAnswer)
+        protected ProblemBase(TAnswer answer)
         {
-            this.expectedAnswer = expectedAnswer;
+            this.answer = answer;
+            solutions = new List<ISolution>();
         }
 
 
-        #region ISolution Members
-        object ISolution.Answer
+        #region IProblem Members
+        object IProblem.ExpectedAnswer
         {
-            get { return expectedAnswer; }
+            get { return answer; }
         }
 
 
-        object ISolution.CalculatedAnswer
+        IEnumerable<ISolution> IProblem.GetSolutions()
         {
-            get { return GetAnswer(); }
+            return solutions.OfType<ISolution>();
         }
         #endregion
 
 
-        protected abstract object GetAnswer();
+        protected void AddSolution(Func<TAnswer> f)
+        {
+            AddSolution(f, null);
+        }
+
+
+        protected void AddSolution(Func<TAnswer> f, string note)
+        {
+            solutions.Add(new Solution<TAnswer>(f, note));
+        }
 
 
         public override string ToString()

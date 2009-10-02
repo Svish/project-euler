@@ -1,50 +1,22 @@
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
 using NUnit.Framework;
-using Problems.Solutions;
+using ProjectEuler.Problems;
 
 
-namespace Problems.Tests.Solutions
+namespace ProjectEuler.Tests.Problems
 {
     [TestFixture]
     public class SolutionTests
     {
-        private static IEnumerable<ISolution> GetSolutions()
-        {
-            // Find implementors
-            return Assembly
-                .GetAssembly(typeof(ISolution))
-                .GetTypes()
-                .Where(x => x.IsClass
-                         && !x.IsAbstract
-                         && typeof(ISolution).IsAssignableFrom(x))
-                .OrderBy(x => x.Name, new NaturalStringComparer())
-                .Select(x => (ISolution)Activator.CreateInstance(x));
-        }
-
         [Test]
-        public void AllSolutions_ReturnExpectedAnswer()
+        public void WorksAsExpected()
         {
-            foreach (var solution in GetSolutions())
-            {
-                var watch = Stopwatch.StartNew();
-
-                var actual = solution.CalculatedAnswer;
-
-                Assert.AreEqual(solution.Answer, actual,
-                    string.Format("Solution of {0} is not correct", solution));
-
-                watch.Stop();
-
-                Console.WriteLine("{0,-20}OK     {1,10} ms {2,15} ticks {3,30}",
-                    solution,
-                    watch.ElapsedMilliseconds,
-                    watch.ElapsedTicks,
-                    actual);
-            }
+            var s = new Solution<int>(() => 7, "Test");
+            
+            Assert.That(s.Note, Is.EqualTo("Test"));
+            Assert.That(s.GetAnswer(), Is.EqualTo(7));
+            Assert.That((s as ISolution).GetAnswer(), Is.EqualTo(7));
         }
     }
 }

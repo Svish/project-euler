@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 
 
-namespace Problems
+namespace ProjectEuler
 {
     public static class Numbers
     {

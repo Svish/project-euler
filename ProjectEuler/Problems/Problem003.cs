@@ -19,7 +19,7 @@ namespace ProjectEuler.Problems
 
         private static ulong Solution()
         {
-            return Eratosthenes.GetPrimeFactors(600851475143).Max();
+            return Factorization.GetPrimeFactors(600851475143, new Eratosthenes()).Max();
         }
     }
 }

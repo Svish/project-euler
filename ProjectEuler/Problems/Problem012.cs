@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 
 namespace ProjectEuler.Problems
@@ -18,15 +19,9 @@ namespace ProjectEuler.Problems
 
         private static ulong Solution()
         {
-            return 0;
+            throw new NotImplementedException();
             return new TriangleSequence()
-                .Select(x => new
-                    {
-                        Number = x,
-                        DivisorCount = Factorization.GetDivisors(x).Count(),
-                    })
-                .First(x => x.DivisorCount > 500)
-                .Number;
+                .First(x => Factorization.GetCountOfDivisors(x) > 500);
         }
     }
 }

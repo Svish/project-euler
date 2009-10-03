@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using System.Linq;
 using NUnit.Framework;
 using ProjectEuler.Problems;
+using System.Collections.Generic;
 
 
 namespace ProjectEuler.Performance
@@ -18,11 +20,16 @@ namespace ProjectEuler.Performance
                 return;
             }
 
-            var divider = new string('-', 90);
-            const string format = "{0,-15} {5,13:F2} {1,13} {3,13} {2,13} {4,13:F2}    {6}";
+            const string format = "{0,-15} {3,13} {4,13}  {1,13} {2,13}   {5}";
 
-            Console.WriteLine(format, "N = " + n, "Minimum", "Maximum", "Average", "StdDev", "Total", "Note");
-            Console.WriteLine(divider);
+            Console.WriteLine(format,
+                "N = " + n,
+                "Minimum",
+                "Maximum",
+                "Mean",
+                "StdDev",
+                "Note");
+            Console.WriteLine(new string('-', 90));
 
             foreach (var problem in new ProblemIterator())
             {
@@ -30,25 +37,18 @@ namespace ProjectEuler.Performance
                 foreach (var s in problem.GetSolutions())
                 {
                     var solution = s;
-                    var results = Benchmark.This(() => solution.GetAnswer(), TimeSpan.FromSeconds(2))
+                    var results = Benchmark
+                        .This(() => solution.GetAnswer(), TimeSpan.FromSeconds(2))
                         .Take(n)
-                        .Select(x => x.TotalMilliseconds)
-                        .OrderBy(x => x)
-                        .ToArray();
-
-                    var min = results.Min();
-                    var max = results.Max();
-                    var average = Math.Round(results.Average(), 2);
-                    var stdDev = Math.Sqrt(results.Select(x => (x - average) * (x - average)).Sum() / (results.Count() - 1));
-                    var sum = results.Sum();
+                        .Select(x => x.Ticks)
+                        .ToList();
 
                     Console.WriteLine(format,
                         first ? problem.ToString() : "",
-                        min,
-                        max,
-                        average,
-                        stdDev,
-                        sum,
+                        results.Min(),
+                        results.Max(),
+                        Math.Round(results.Median(), 0),
+                        Math.Round(Math.Sqrt(Convert.ToDouble(results.Variance(true))), 0),
                         s.Note ?? "--");
                     first = false;
                 }

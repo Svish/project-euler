@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FactorizationTests.cs" />
+    <Compile Include="StatisticsTests.cs" />
     <Compile Include="TestExtensions\EnumerableExtensions.cs" />
     <Compile Include="EratosthenesTests.cs" />
     <Compile Include="FibonacciSequenceTests.cs" />

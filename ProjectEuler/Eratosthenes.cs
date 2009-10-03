@@ -52,36 +52,6 @@ namespace ProjectEuler
         #endregion
 
 
-        /// <summary>
-        /// Returns the prime factors of the given number. 
-        /// Uses an instance of <see cref="Eratosthenes"/> for <see cref="IPrimeSequence"/>.
-        /// </summary>
-        public static IEnumerable<ulong> GetPrimeFactors(ulong value)
-        {
-            return GetPrimeFactors(value, new Eratosthenes());
-        }
-
-
-        /// <summary>
-        /// Returns the prime factors of the given number.
-        /// </summary>
-        public static IEnumerable<ulong> GetPrimeFactors(ulong value, IPrimeSequence primeSequence)
-        {
-            foreach (var prime in primeSequence)
-            {
-                while (value % prime == 0)
-                {
-                    value /= prime;
-                    yield return prime;
-                }
-
-                if (value == 1)
-                {
-                    yield break;
-                }
-            }
-        }
-
 
         private bool IsPrime(ulong value)
         {

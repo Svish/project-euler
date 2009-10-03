@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 
 namespace ProjectEuler.Tests
@@ -15,51 +14,6 @@ namespace ProjectEuler.Tests
         public void FindGreatestPalindromeWith_Examples_AreCorrect(byte digits, long result)
         {
             Assert.AreEqual(result, Numbers.FindLargestPalindromeMadeFromProductOf(digits));
-        }
-
-
-        [TestCase(true, 5UL, new ulong[] {5})]
-        [TestCase(true, 6UL, new ulong[] {2, 3})]
-        [TestCase(false, 8UL, new ulong[] {2, 3})]
-        [TestCase(true, 10UL, new ulong[] {10, 5, 2})]
-        [TestCase(false, 10UL, new ulong[] {10, 5, 3})]
-        public void IsEvenlyDivisibleBy_Examples_AreCorrect(bool result, ulong value, ulong[] divisors)
-        {
-            Assert.AreEqual(result, value.IsEvenlyDivisibleBy(divisors),
-                string.Format("{0} % {1}", value, string.Join(", ", divisors.Select(x => x.ToString()).ToArray())));
-        }
-
-
-        [TestCase(1UL, new ulong[] {1})]
-        [TestCase(2UL, new ulong[] {2})]
-        [TestCase(6UL, new ulong[] {2, 3})]
-        [TestCase(10UL, new ulong[] {2, 5})]
-        [TestCase(2520UL, new ulong[] {6, 7, 8, 9, 10})] // 1-10, stripped down.
-        public void LowestCommonMultiple_Examples_AreCorrect(ulong result, ulong[] divisors)
-        {
-            Assert.AreEqual(result, Numbers.GetLowestCommonMultiple(divisors));
-        }
-
-
-        [TestCase(12UL, 15UL, Result = 60)]
-        [TestCase(18UL, 24UL, Result = 72)]
-        [TestCase(9UL, 10UL, Result = 90)]
-        [TestCase(14UL, 42UL, Result = 42)]
-        [TestCase(18UL, 30UL, Result = 90)]
-        public ulong LowestCommonMultiple_Examples_AreCorrect(ulong a, ulong b)
-        {
-            return Numbers.GetLowestCommonMultiple(a, b);
-        }
-
-
-        [TestCase(5UL, 5UL, Result = 5)]
-        [TestCase(15UL, 5UL, Result = 5)]
-        [TestCase(7UL, 9UL, Result = 1)]
-        [TestCase(12UL, 9UL, Result = 3)]
-        [TestCase(81UL, 57UL, Result = 3)]
-        public ulong GreatestCommonDivisor_Examples_AreCorrect(ulong a, ulong b)
-        {
-            return Numbers.GetGreatestCommonDivisor(a, b);
         }
 
 
@@ -141,13 +95,6 @@ namespace ProjectEuler.Tests
         public ulong SumExpansionK2(ulong n)
         {
             return Numbers.SumExpansionK2(n);
-        }
-
-
-        [Test]
-        public void IsEvenlyDivisibleBy_Zero_ThrowsException()
-        {
-            Assert.That(() => 5UL.IsEvenlyDivisibleBy(0), Throws.ArgumentException);
         }
     }
 }

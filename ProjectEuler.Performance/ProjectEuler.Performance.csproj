@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4B8DB562-9776-4C45-8A56-C17779EDEC66}</ProjectGuid>
+    <ProjectGuid>{1321F22C-1577-41E3-BA17-176A4E441908}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjectEuler</RootNamespace>
-    <AssemblyName>ProjectEuler</AssemblyName>
+    <RootNamespace>ProjectEuler.Performance</RootNamespace>
+    <AssemblyName>ProjectEuler.Performance</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,45 +31,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Lokad.Shared, Version=1.5.118.1, Culture=neutral, PublicKeyToken=43f0664b2b4db1fc, processorArchitecture=MSIL">
+    <Reference Include="nunit.framework, Version=2.5.2.9222, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Lokad\Lokad.Shared.dll</HintPath>
+      <HintPath>..\Lib\NUnit\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Eratosthenes.cs" />
-    <Compile Include="Factorization.cs" />
-    <Compile Include="FibonacciSequence.cs" />
-    <Compile Include="IPrimeSequence.cs" />
-    <Compile Include="NaturalStringComparer.cs" />
-    <Compile Include="Problems\Problem012.cs" />
-    <Compile Include="Problems\ProblemIterator.cs" />
-    <Compile Include="PythagoreanTriples.cs" />
-    <Compile Include="Problems\ISolution.cs" />
-    <Compile Include="Problems\Problem010.cs" />
-    <Compile Include="Problems\Problem011.cs" />
-    <Compile Include="Problems\Problem009.cs" />
-    <Compile Include="Problems\Problem008.cs" />
-    <Compile Include="Problems\Problem007.cs" />
-    <Compile Include="Problems\Problem006.cs" />
-    <Compile Include="Problems\Problem005.cs" />
-    <Compile Include="Problems\Problem004.cs" />
-    <Compile Include="Problems\IProblem.cs" />
-    <Compile Include="Problems\ProblemBase.cs" />
-    <Compile Include="Problems\Problem001.cs" />
-    <Compile Include="Problems\Problem002.cs" />
-    <Compile Include="Problems\Problem003.cs" />
+    <Compile Include="Benchmark.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Numbers.cs" />
-    <Compile Include="Problems\Solution.cs" />
-    <Compile Include="Strings.cs" />
-    <Compile Include="TriangleSequence.cs" />
+    <Compile Include="SolutionPerformance.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectEuler\ProjectEuler.csproj">
+      <Project>{4B8DB562-9776-4C45-8A56-C17779EDEC66}</Project>
+      <Name>ProjectEuler</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

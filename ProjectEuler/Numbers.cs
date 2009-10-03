@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
@@ -7,24 +8,6 @@ namespace ProjectEuler
 {
     public static class Numbers
     {
-        /// <summary>
-        /// Returns the sum of 1 + 2 + 3 + ... + n. (Sum n)
-        /// </summary>
-        public static ulong SumExpansionK1(ulong n)
-        {
-            return (n * n + n) / 2;
-        }
-
-
-        /// <summary>
-        /// Returns the sum of 1^2 + 2^2 + 3^2 + ... + n^2. (Sum n^2)
-        /// </summary>
-        public static ulong SumExpansionK2(ulong n)
-        {
-            return n * (n + 1) * (2 * n + 1) / 6;
-        }
-
-
         /// <summary>
         /// Reverses the number.
         /// </summary>
@@ -38,32 +21,6 @@ namespace ProjectEuler
             }
             return r;
         }
-
-
-        /// <summary>
-        /// Finds the smalles number that is divisible by the given divisors; zero if none could be found.
-        /// </summary>
-        public static ulong GetLowestCommonMultiple(params ulong[] divisors)
-        {
-            return divisors.Aggregate(1UL, (a, b) => a / GetGreatestCommonDivisor(a, b) * b);
-        }
-
-
-        /// <summary>
-        /// Returns the greatest common divisor of two numbers.
-        /// </summary>
-        public static ulong GetGreatestCommonDivisor(ulong a, ulong b)
-        {
-            while (b != 0)
-            {
-                var t = b;
-                b = a % b;
-                a = t;
-            }
-            return a;
-        }
-
-
         /// <summary>
         /// Returns true if the given number is a palindrome; otherwise false.
         /// </summary>
@@ -78,7 +35,7 @@ namespace ProjectEuler
         /// </summary>
         public static byte GetNumberOfDigits(this ulong value)
         {
-            return (byte) value.ToString(CultureInfo.InvariantCulture).Length;
+            return (byte)value.ToString(CultureInfo.InvariantCulture).Length;
         }
 
 
@@ -93,8 +50,8 @@ namespace ProjectEuler
 
             ulong largestPalindrome = 0;
 
-            var upper = (ulong) Math.Pow(10, digits) - 1;
-            var lower = (ulong) Math.Pow(10, digits - 1);
+            var upper = (ulong)Math.Pow(10, digits) - 1;
+            var lower = (ulong)Math.Pow(10, digits - 1);
 
             for (var x = upper; x >= lower; x--)
                 for (var y = upper; y >= lower; y--)
@@ -113,16 +70,22 @@ namespace ProjectEuler
 
 
         /// <summary>
-        /// Returns true if the given value is evenly divisible by all the given divisors; otherwise false.
+        /// Returns the sum of 1 + 2 + 3 + ... + n. (Sum n)
         /// </summary>
-        public static bool IsEvenlyDivisibleBy(this ulong value, params ulong[] divisors)
+        public static ulong SumExpansionK1(ulong n)
         {
-            if (divisors.Any(x => x == 0))
-                throw new ArgumentException("Divisors can not be zero.");
-            foreach (var divisor in divisors)
-                if (value % divisor != 0)
-                    return false;
-            return true;
+            return (n * n + n) / 2;
         }
+
+
+        /// <summary>
+        /// Returns the sum of 1^2 + 2^2 + 3^2 + ... + n^2. (Sum n^2)
+        /// </summary>
+        public static ulong SumExpansionK2(ulong n)
+        {
+            return n * (n + 1) * (2 * n + 1) / 6;
+        }
+
+
     }
 }

@@ -5,16 +5,23 @@ namespace ProjectEuler
 {
     public static class Strings
     {
-        public static string Reverse(this string text)
+        public static string Truncate(this string subject, int length)
         {
-            if (text == null)
-                throw new ArgumentNullException("text");
+            if(subject.Length <= length)
+                return subject;
+            return subject.Substring(0, length);
+        }
 
-            var length = text.Length;
+        public static string Reverse(this string subject)
+        {
+            if (subject == null)
+                throw new ArgumentNullException("subject");
+
+            var length = subject.Length;
             var arr = new char[length];
 
             for (var i = 0; i < length; i++)
-                arr[i] = text[length - 1 - i];
+                arr[i] = subject[length - 1 - i];
 
             return new string(arr);
         }

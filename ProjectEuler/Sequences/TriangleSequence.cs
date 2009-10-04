@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace ProjectEuler
+namespace ProjectEuler.Sequences
 {
     /// <summary>
     /// Generates the triangle sequence, starting with 1, 3, 6, 10, 15 and so on.

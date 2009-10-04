@@ -43,14 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Eratosthenes.cs" />
+    <Compile Include="Sequences\Eratosthenes.cs" />
     <Compile Include="Factorization.cs" />
-    <Compile Include="FibonacciSequence.cs" />
-    <Compile Include="IPrimeSequence.cs" />
+    <Compile Include="Sequences\FibonacciSequence.cs" />
+    <Compile Include="Sequences\IPrimeSequence.cs" />
     <Compile Include="NaturalStringComparer.cs" />
     <Compile Include="Problems\Problem012.cs" />
     <Compile Include="Problems\ProblemIterator.cs" />
-    <Compile Include="PythagoreanTriples.cs" />
+    <Compile Include="Sequences\ProbablePrimeSequence.cs" />
+    <Compile Include="Sequences\PythagoreanTriples.cs" />
     <Compile Include="Problems\ISolution.cs" />
     <Compile Include="Problems\Problem010.cs" />
     <Compile Include="Problems\Problem011.cs" />
@@ -70,7 +71,7 @@
     <Compile Include="Problems\Solution.cs" />
     <Compile Include="Statistics.cs" />
     <Compile Include="Strings.cs" />
-    <Compile Include="TriangleSequence.cs" />
+    <Compile Include="Sequences\TriangleSequence.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

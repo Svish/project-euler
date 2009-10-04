@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Linq;
 using NUnit.Framework;
+using ProjectEuler.Sequences;
 using ProjectEuler.Tests.TestExtensions;
 
 
-namespace ProjectEuler.Tests
+namespace ProjectEuler.Tests.Sequences
 {
     [TestFixture]
     public class FibonacciSequenceTests

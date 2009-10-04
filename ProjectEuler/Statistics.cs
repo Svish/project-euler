@@ -8,18 +8,19 @@ namespace ProjectEuler
     {
         public static decimal Median(this IEnumerable<long> subjects)
         {
-            var sortedList = subjects.ToList();
-            sortedList.Sort();
+            var items = subjects.ToList();
+            items.Sort();
 
-            var itemIndex = sortedList.Count / 2;
+            if (items.Count < 2)
+                return items.Count == 0 ? 0 : items.First();
+                
 
-            if (itemIndex == 0)
-                return 0;
+            var itemIndex = items.Count / 2;
 
-            if (sortedList.Count() % 2 == 0)
-                return (sortedList[itemIndex] + sortedList[itemIndex - 1]) / 2M;
+            if (items.Count() % 2 == 0)
+                return (items[itemIndex] + items[itemIndex - 1]) / 2M;
 
-            return sortedList[itemIndex];
+            return items[itemIndex];
         }
 
         public static decimal Variance(this IEnumerable<long> subjects, bool entirePopulation)

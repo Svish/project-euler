@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace ProjectEuler
+namespace ProjectEuler.Sequences
 {
     /// <summary>
     /// Generates prime numbers by using a variation upon the 

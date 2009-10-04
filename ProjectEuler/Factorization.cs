@@ -1,27 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using ProjectEuler.Sequences;
+
 
 namespace ProjectEuler
 {
     public static class Factorization
     {
-
-
         /// <summary>
-        /// Finds the smalles number that is divisible by the given divisors; zero if none could be found.
+        /// Returns the Lowest Common Multiple, the smallest number 
+        /// that is divisible by all the given divisors; 
+        /// zero if none could be found.
         /// </summary>
-        public static ulong GetLowestCommonMultiple(params ulong[] divisors)
+        public static ulong Lcm(params ulong[] divisors)
         {
-            return divisors.Aggregate(1UL, (a, b) => a / GetGreatestCommonDivisor(a, b) * b);
+            return divisors.Aggregate(1UL, (a, b) => a / Gcd(a, b) * b);
         }
 
-        
+
         /// <summary>
-        /// Returns the greatest common divisor of two numbers.
+        /// Returns the Greatest Common Divisor of two numbers.
         /// </summary>
-        public static ulong GetGreatestCommonDivisor(ulong a, ulong b)
+        public static ulong Gcd(ulong a, ulong b)
         {
             while (b != 0)
             {
@@ -55,22 +56,13 @@ namespace ProjectEuler
 
 
         /// <summary>
-        /// Returns true if the given value is evenly divisible 
-        /// by all the given divisors; otherwise false.
+        /// Returns all the divisors of the given number. (Naive trial division)
         /// </summary>
-        public static bool IsEvenlyDivisibleBy(this ulong value, params ulong[] divisors)
+        public static IEnumerable<ulong> GetDivisorsNaive(ulong number)
         {
-            foreach (var divisor in divisors)
-                if (value % divisor != 0)
-                    return false;
-            return true;
-        }
+            if (number == 0)
+                yield break;
 
-        /// <summary>
-        /// Returns all the divisors of the given number.
-        /// </summary>
-        public static IEnumerable<ulong> GetDivisors(ulong number)
-        {
             var limit = number / 2;
             for (ulong i = 1; i <= limit; i++)
                 if (number % i == 0)
@@ -78,5 +70,36 @@ namespace ProjectEuler
 
             yield return number;
         }
+
+
+        /// <summary>
+        /// Returns the number of possible divisors for the given number.
+        /// </summary>
+        // http://stackoverflow.com/questions/110344/algorithm-to-calculate-the-number-of-divisors-of-a-given-number/118712#118712
+        public static ulong GetCountOfDivisors(ulong number)
+        {
+            if (number == 0)
+                return 0;
+
+            var divisors = 1UL;
+
+            foreach (var prime in new ProbablePrimeSequence())
+            {
+                var exponent = 0UL;
+                while (number % prime == 0)
+                {
+                    exponent += 1;
+                    number /= prime;
+                }
+
+                if (exponent > 0)
+                    divisors *= exponent + 1;
+
+                if (number == 1)
+                    break;
+            }
+            return divisors;
+        }
+
     }
 }

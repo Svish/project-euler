@@ -48,20 +48,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FactorizationTests.cs" />
+    <Compile Include="Sequences\IPrimeSequence.cs" />
+    <Compile Include="Sequences\PrimeSupersetTests.cs" />
     <Compile Include="StatisticsTests.cs" />
     <Compile Include="TestExtensions\EnumerableExtensions.cs" />
-    <Compile Include="EratosthenesTests.cs" />
-    <Compile Include="FibonacciSequenceTests.cs" />
+    <Compile Include="Sequences\EratosthenesTests.cs" />
+    <Compile Include="Sequences\FibonacciSequenceTests.cs" />
     <Compile Include="TestExtensions\EnumerableExtensionsTests.cs" />
     <Compile Include="NaturalStringComparerTests.cs" />
     <Compile Include="Problems\ProblemIteratorTests.cs" />
     <Compile Include="Problems\SolutionTests.cs" />
-    <Compile Include="PythagoreanTriplesTests.cs" />
+    <Compile Include="Sequences\PythagoreanTriplesTests.cs" />
     <Compile Include="Problems\AnswerChecks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NumbersTests.cs" />
     <Compile Include="StringsTests.cs" />
-    <Compile Include="TriangleSequenceTests.cs" />
+    <Compile Include="Sequences\TriangleSequenceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProjectEuler\ProjectEuler.csproj">

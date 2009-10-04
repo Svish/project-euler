@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Problems\Problem013.cs" />
+    <Compile Include="Problems\Problem014.cs" />
     <Compile Include="Sequences\Atkin.cs" />
     <Compile Include="Sequences\Eratosthenes.cs" />
     <Compile Include="Factorization.cs" />

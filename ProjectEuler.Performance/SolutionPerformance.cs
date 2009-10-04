@@ -11,14 +11,11 @@ namespace ProjectEuler.Performance
     [TestFixture]
     public class SolutionPerformance
     {
-        [TestCase(500)]
-        public void AllSolutions_Benchmark(int n)
+        [Test]
+        public void AllSolutions_Benchmark()
         {
-            if (n < 1)
-            {
-                Console.WriteLine("Benchmarking disabled (N = 0).");
-                return;
-            }
+            var maxPerSolution = TimeSpan.FromSeconds(10);
+            const int n = 500;
 
             const string format = "{0,-15} {6,8} {3,13} {4,13}  {1,13} {2,13}   {5}";
 
@@ -39,7 +36,7 @@ namespace ProjectEuler.Performance
                 {
                     var solution = s;
                     var results = Benchmark
-                        .This(() => solution.GetAnswer(), TimeSpan.FromSeconds(10))
+                        .This(() => solution.GetAnswer(), maxPerSolution)
                         .Take(n)
                         .Select(x => (long) x.TotalMilliseconds)
                         .ToList();

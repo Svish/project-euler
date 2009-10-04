@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System;
+using System.Linq;
+using NUnit.Framework;
 
 
 namespace ProjectEuler.Tests
@@ -6,6 +8,25 @@ namespace ProjectEuler.Tests
     [TestFixture]
     public class NumbersTests
     {
+        [Test]
+        [ExpectedException(typeof(DivideByZeroException))]
+        public void IsEvenlyDivisibleBy_Zero_ThrowsException()
+        {
+            Numbers.IsEvenlyDivisibleBy(5, 0);
+        }
+
+
+        [TestCase(true, 5UL, new ulong[] { 5 })]
+        [TestCase(true, 6UL, new ulong[] { 2, 3 })]
+        [TestCase(false, 8UL, new ulong[] { 2, 3 })]
+        [TestCase(true, 10UL, new ulong[] { 10, 5, 2 })]
+        [TestCase(false, 10UL, new ulong[] { 10, 5, 3 })]
+        public void IsEvenlyDivisibleBy_Examples_AreCorrect(bool expected, ulong value, ulong[] divisors)
+        {
+            var actual = value.IsEvenlyDivisibleBy(divisors);
+            Assert.AreEqual(expected, actual,
+                string.Format("{0} % {1}", value, string.Join(", ", divisors.Select(x => x.ToString()).ToArray())));
+        }
         [TestCase((byte) 0, 0L)] // 0 * 0 = 0
         [TestCase((byte) 1, 9L)] // 9 = 1 * 9
         [TestCase((byte) 2, 9009L)] // 9009 = 91 * 99
@@ -24,7 +45,7 @@ namespace ProjectEuler.Tests
         [TestCase(1234567UL, 7)]
         [TestCase(ulong.MaxValue, 20)]
         [TestCase(ulong.MinValue, 1)]
-        public void GetNumberOfDigits_Int64Numbers(ulong value, int actualDigits)
+        public void GetNumberOfDigits_Examples_AreCorrect(ulong value, int actualDigits)
         {
             Assert.AreEqual(actualDigits, value.GetNumberOfDigits());
         }
@@ -40,9 +61,19 @@ namespace ProjectEuler.Tests
         [TestCase(122UL, 221UL)]
         [TestCase(221UL, 122UL)]
         [TestCase(1234UL, 4321UL)]
-        public void Reverse_Int64Numbers(ulong value, ulong reversed)
+        [TestCase(18446744073709551611UL, 11615590737044764481UL)]
+        public void Reverse_Examples_AreCorrect(ulong number, ulong expected)
         {
-            Assert.AreEqual(value.Reverse(), reversed);
+            var actual = number.Reverse();
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [Test]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Reverse_NumberOutOfRange_ThrowsArgumentOutOfRange()
+        {
+            18446744073709551612.Reverse();
         }
 
 

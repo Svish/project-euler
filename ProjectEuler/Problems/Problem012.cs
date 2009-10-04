@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using ProjectEuler.Sequences;
 
 
 namespace ProjectEuler.Problems
@@ -11,7 +12,7 @@ namespace ProjectEuler.Problems
     public class Problem012 : ProblemBase<ulong>
     {
         public Problem012()
-            : base(0)
+            : base(76576500)
         {
             AddSolution(Solution);
         }
@@ -19,7 +20,6 @@ namespace ProjectEuler.Problems
 
         private static ulong Solution()
         {
-            throw new NotImplementedException();
             return new TriangleSequence()
                 .First(x => Factorization.GetCountOfDivisors(x) > 500);
         }

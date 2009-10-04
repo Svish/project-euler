@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace ProjectEuler
+namespace ProjectEuler.Sequences
 {
     /// <summary>
     /// Generates the Fibonacci sequence, starting with 1, 1, 2, 3, 5 and so on.

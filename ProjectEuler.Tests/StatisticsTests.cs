@@ -60,6 +60,14 @@ namespace ProjectEuler.Tests
 
 
         [Test]
+        public void Median_SingleNumber_ReturnsNumber()
+        {
+            var actual = new long[] {7}.Median();
+            Assert.AreEqual(7, actual);
+        }
+
+
+        [Test]
         public void Median_EvenNumber_ReturnsMiddle()
         {
             var actual = new long[] { 1, 5, 2, 10, 8, 7 }.Median();

@@ -1,10 +1,47 @@
+using System.Collections;
+using NUnit.Framework;
+using ProjectEuler.Sequences;
+using ProjectEuler.Tests.TestExtensions;
+
+
 namespace ProjectEuler.Tests.Sequences
 {
     /// <summary>
     /// Just contains an array with the first five hundred primes for testing.
     /// </summary>
-    public static class PrimeSequence
+    public abstract class PrimeSequenceTests<TPrimeSequence>
+        where TPrimeSequence : IPrimeSequence
     {
+        protected abstract TPrimeSequence GetSequence();
+
+
+        [Test]
+        public void GetEnumerator_FirstFiveHundredNumbers_AreCorrect()
+        {
+            IEnumerable eratosthenes = GetSequence();
+
+            var result = eratosthenes.Take(500).ToArray();
+            CollectionAssert.AreEqual(PrimeSequenceTests.First500, result);
+        }
+
+
+
+        [Test]
+        public void GetEnumerator_WhenRanTwice_GetSameNumbers()
+        {
+            IPrimeSequence gen = GetSequence();
+
+            var a = gen.Take(100).ToArray();
+            var b = gen.Take(100).ToArray();
+
+            CollectionAssert.AreEqual(a, b);
+        }
+    }
+
+    public static class PrimeSequenceTests
+    {
+
+
         public static readonly ulong[] First500 = new ulong[]
             {
                 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,

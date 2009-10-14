@@ -14,8 +14,8 @@ namespace ProjectEuler.Tests.Sequences
         {
             IEnumerable eratosthenes = new ProbablePrimeSequence();
 
-            var result = eratosthenes.Take(1200);
-            Assert.That(PrimeSequence.First500, Is.SubsetOf(result));
+            var result = eratosthenes.Take(1200).ToArray();
+            Assert.That(PrimeSequenceTests.First500, Is.SubsetOf(result));
         }
     }
 }

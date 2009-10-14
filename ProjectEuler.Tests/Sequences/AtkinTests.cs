@@ -1,21 +1,16 @@
-using System.Collections;
 using NUnit.Framework;
 using ProjectEuler.Sequences;
-using ProjectEuler.Tests.TestExtensions;
+using System.Linq;
 
 
 namespace ProjectEuler.Tests.Sequences
 {
     [TestFixture]
-    public class AtkinTests
+    public class AtkinTests : PrimeSequenceTests<Atkin>
     {
-        [Test]
-        public void GetEnumerator_FirstFiveHundredNumbers_AreCorrect()
+        protected override Atkin GetSequence()
         {
-            IEnumerable eratosthenes = new Atkin();
-
-            var result = eratosthenes.Take(500);
-            CollectionAssert.AreEqual(PrimeSequence.First500, result);
+            return new Atkin(4000);
         }
     }
 }

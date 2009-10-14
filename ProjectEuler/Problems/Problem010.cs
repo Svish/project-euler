@@ -14,9 +14,17 @@ namespace ProjectEuler.Problems
         public Problem010()
             : base(142913828922)
         {
-            AddSolution(GetAnswer);
+            AddSolution(GetAnswer, "Eratosthenes");
+            AddSolution(GetAnswer2, "Atkin");
         }
 
+        private static ulong GetAnswer2()
+        {
+            const ulong limit = 2000000;
+            return new Atkin(limit)
+                .TakeWhile(x => x < limit)
+                .Aggregate((sum, x) => sum + x);
+        }
 
         private static ulong GetAnswer()
         {

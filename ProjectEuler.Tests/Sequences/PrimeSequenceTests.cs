@@ -18,9 +18,9 @@ namespace ProjectEuler.Tests.Sequences
         [Test]
         public void GetEnumerator_FirstFiveHundredNumbers_AreCorrect()
         {
-            IEnumerable eratosthenes = GetSequence();
+            IEnumerable sequence = GetSequence();
 
-            var result = eratosthenes.Take(500).ToArray();
+            var result = sequence.Take(500).ToArray();
             CollectionAssert.AreEqual(PrimeSequenceTests.First500, result);
         }
 

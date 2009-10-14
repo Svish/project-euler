@@ -22,7 +22,7 @@ namespace ProjectEuler.Sequences
 
         private void FindPrimes()
         {
-            var isPrime = new bool[limit+1];
+            var isPrime = new bool[limit + 1];
             var sqrt = Math.Sqrt(limit);
 
             for (ulong x = 1; x <= sqrt; x++)
@@ -43,9 +43,12 @@ namespace ProjectEuler.Sequences
 
             for (ulong n = 5; n <= sqrt; n++)
                 if (isPrime[n])
-                    for (ulong k = n * n; k <= limit; k *= k)
+                {
+                    var s = n * n;
+                    for (ulong k = s; k <= limit; k += s)
                         isPrime[k] = false;
-
+                }
+                    
             primes.Add(2);
             primes.Add(3);
             for (ulong n = 5; n <= limit; n++)
@@ -56,9 +59,8 @@ namespace ProjectEuler.Sequences
 
         public IEnumerator<ulong> GetEnumerator()
         {
-            if(!primes.Any())
+            if (!primes.Any())
                 FindPrimes();
-
 
             foreach (var p in primes)
                 yield return p;

@@ -1,7 +1,5 @@
 using NUnit.Framework;
 using ProjectEuler.Sequences;
-using System.Linq;
-
 
 namespace ProjectEuler.Tests.Sequences
 {

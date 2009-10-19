@@ -22,10 +22,9 @@ namespace ProjectEuler.Problems
         {
             const ulong limit = 2000000;
             return new Atkin(limit)
-                .TakeWhile(x => x < limit)
                 .Aggregate((sum, x) => sum + x);
         }
-
+        
         private static ulong GetAnswer()
         {
             const ulong limit = 2000000;

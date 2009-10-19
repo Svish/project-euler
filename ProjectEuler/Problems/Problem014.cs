@@ -29,8 +29,8 @@
 
         private static uint Solution()
         {
-            var longestStart = 0U;
-            var longestLength = 0U;
+            var startOfLongest = 0U;
+            var longestChain = 0U;
 
             for (var start = 1000000U; start > 0; start--)
             {
@@ -46,14 +46,14 @@
                     length++;
                 }
 
-                if (length < longestLength)
+                if (length < longestChain)
                     continue;
 
-                longestStart = start;
-                longestLength = length;
+                startOfLongest = start;
+                longestChain = length;
             }
 
-            return longestStart;
+            return startOfLongest;
         }
     }
 }

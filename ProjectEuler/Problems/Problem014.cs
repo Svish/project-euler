@@ -29,29 +29,31 @@
 
         private static uint Solution()
         {
-            var a = 0U;
-            var len = 0U;
-            for (var n = 1000000U; n > 0; n--)
-            {
-                var x = n;
-                var l = 1U;
+            var longestStart = 0U;
+            var longestLength = 0U;
 
-                while (x != 1)
+            for (var start = 1000000U; start > 0; start--)
+            {
+                var s = start;
+                var length = 1U;
+
+                while (s != 1)
                 {
-                    if (x % 2 == 0)
-                        x /= 2;
+                    if (s % 2 == 0)
+                        s /= 2;
                     else
-                        x = 3 * x + 1;
-                    l++;
+                        s = 3 * s + 1;
+                    length++;
                 }
 
-                if (l < len)
+                if (length < longestLength)
                     continue;
 
-                a = n;
-                len = l;
+                longestStart = start;
+                longestLength = length;
             }
-            return a;
+
+            return longestStart;
         }
     }
 }

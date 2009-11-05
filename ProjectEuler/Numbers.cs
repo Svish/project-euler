@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 
 
 namespace ProjectEuler
@@ -39,7 +38,12 @@ namespace ProjectEuler
         /// </summary>
         public static byte GetNumberOfDigits(this ulong value)
         {
-            return (byte) value.ToString(CultureInfo.InvariantCulture).Length;
+            var digits = value > 0
+                ? Math.Log10(value) + 1d
+                : 1;
+
+            return (byte)digits;
+            // return (byte) value.ToString(CultureInfo.InvariantCulture).Length;
         }
 
 

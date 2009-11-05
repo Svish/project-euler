@@ -49,8 +49,9 @@
   <ItemGroup>
     <Compile Include="FactorizationTests.cs" />
     <Compile Include="Sequences\AtkinTests.cs" />
-    <Compile Include="Sequences\PrimeSequenceTests.cs" />
+    <Compile Include="Sequences\PrimeSequenceTestBase.cs" />
     <Compile Include="Sequences\PrimeSupersetTests.cs" />
+    <Compile Include="Sequences\KnownSequences.cs" />
     <Compile Include="StatisticsTests.cs" />
     <Compile Include="TestExtensions\EnumerableExtensions.cs" />
     <Compile Include="Sequences\EratosthenesTests.cs" />

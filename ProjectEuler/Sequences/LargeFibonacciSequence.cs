@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Oyster.Math;
 
 
 namespace ProjectEuler.Sequences
@@ -8,13 +9,13 @@ namespace ProjectEuler.Sequences
     /// Generates the Fibonacci sequence, starting with 0, 1, 1, 2, 3, 5 and so on.
     /// </summary>
     /// <remarks>The <see cref="GetEnumerator()"/> method never returns.</remarks>
-    public class FibonacciSequence : IEnumerable<ulong>
+    public class LargeFibonacciSequence : IEnumerable<IntX>
     {
         #region IEnumerable<ulong> Members
-        public IEnumerator<ulong> GetEnumerator()
+        public IEnumerator<IntX> GetEnumerator()
         {
-            var a = 0UL;
-            var b = 1UL;
+            var a = new IntX(0);
+            var b = new IntX(1);
 
             while (true)
             {

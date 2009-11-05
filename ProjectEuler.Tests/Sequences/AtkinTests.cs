@@ -4,11 +4,13 @@ using ProjectEuler.Sequences;
 namespace ProjectEuler.Tests.Sequences
 {
     [TestFixture]
-    public class AtkinTests : PrimeSequenceTests<Atkin>
+    public class AtkinTests : PrimeSequenceTestBase<Atkin>
     {
-        protected override Atkin GetSequence()
+        protected override Atkin GetPrimeSequence()
         {
-            return new Atkin(4000);
+            const int enoughPrimesToPastTest = 4000;
+
+            return new Atkin(enoughPrimesToPastTest);
         }
     }
 }

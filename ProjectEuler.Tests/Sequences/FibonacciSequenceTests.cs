@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Linq;
 using NUnit.Framework;
 using ProjectEuler.Sequences;
 using ProjectEuler.Tests.TestExtensions;
@@ -10,20 +8,32 @@ namespace ProjectEuler.Tests.Sequences
     [TestFixture]
     public class FibonacciSequenceTests
     {
-        [Test]
-        public void GetEnumerator_EulerExample_IsCorrectSequence()
+        private static FibonacciSequence GetFibonacciSequence()
         {
-            var actual = new FibonacciSequence().Skip(1).Take(10).ToArray();
-            var expected = new[] {1, 2, 3, 5, 8, 13, 21, 34, 55, 89};
+            return new FibonacciSequence();
+        }
+
+
+        [Test]
+        public void GetEnumerator_FirstNumbers_AreCorrect()
+        {
+            var expected = KnownSequences.FirstFibonacciNumbers;
+            var actual = GetFibonacciSequence()
+                .Take(expected.Length)
+                .ToArray();
+
             CollectionAssert.AreEqual(expected, actual);
         }
 
 
         [Test]
-        public void GetEnumerator_FirstFifteenNumbers_AreCorrect()
+        public void GetEnumerator_FirstTwo_AreZeroAndOne()
         {
-            var actual = (new FibonacciSequence() as IEnumerable).Take(15);
-            var expected = new[] {1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610};
+            var expected = new[] {0ul, 1ul};
+            var actual = GetFibonacciSequence()
+                .Take(expected.Length)
+                .ToArray();
+
             CollectionAssert.AreEqual(expected, actual);
         }
     }

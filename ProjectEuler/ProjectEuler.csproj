@@ -35,6 +35,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Lokad\Lokad.Shared.dll</HintPath>
     </Reference>
+    <Reference Include="MathNet.Numerics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Math.Net\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="Oyster.IntX, Version=0.9.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\IntX\Oyster.IntX.dll</HintPath>
@@ -50,7 +54,9 @@
     <Compile Include="Problems\Problem013.cs" />
     <Compile Include="Problems\Problem014.cs" />
     <Compile Include="Problems\Problem016.cs" />
+    <Compile Include="Problems\Problem025.cs" />
     <Compile Include="Sequences\Atkin.cs" />
+    <Compile Include="Sequences\LargeFibonacciSequence.cs" />
     <Compile Include="Sequences\Eratosthenes.cs" />
     <Compile Include="Factorization.cs" />
     <Compile Include="Sequences\FibonacciSequence.cs" />

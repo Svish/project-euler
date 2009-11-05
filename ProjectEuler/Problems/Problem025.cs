@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using ProjectEuler.Sequences;
 using MathNet.Numerics;
 
@@ -21,17 +22,20 @@ namespace ProjectEuler.Problems
 
         private static int BruteForce()
         {
-            var sequence = new LargeFibonacciSequence().GetEnumerator();
+            var sequence = new LargeFibonacciSequence();
+            using (var e = sequence.GetEnumerator())
+            {
 
-            var n = 0;
-            while (sequence.MoveNext() && sequence.Current.ToString().Length < 1000)
-                n++;
+                var n = 0;
+                while (e.MoveNext() && e.Current.ToString().Length < 1000)
+                    n++;
 
-            return n;
+                return n;
+            }
         }
 
 
-        public int Mathematical()
+        private static int Mathematical()
         {
             const int length = 1000;
             var digits = (int)Math.Ceiling((length + Math.Log10(5) / 2 - 1) / Math.Log10(Constants.GoldenRatio));

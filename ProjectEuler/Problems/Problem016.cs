@@ -10,7 +10,7 @@ namespace ProjectEuler.Problems
     /// 
     /// What is the sum of the digits of the number 2^1000?
     /// </summary>
-    public class Problem016 : ProblemBase<uint>
+    public class Problem016 : ProblemBase<int>
     {
         public Problem016()
             : base(1366)
@@ -19,14 +19,18 @@ namespace ProjectEuler.Problems
         }
 
 
-        private static uint Solution()
+        private static int Solution()
         {
-            var number = IntX.Pow(2, 1000);
-
-            return number
+            return IntX
+                .Pow(2, 1000)
                 .ToString()
-                .Select(x => Convert.ToUInt32(x - '0'))
-                .Aggregate(0U, (sum, x) => sum + x);
+                .Select(x => x - '0')
+                .Sum();
+        }
+
+        private static object T()
+        {
+            return decimal.MaxValue + Environment.NewLine + ulong.MaxValue;
         }
     }
 }

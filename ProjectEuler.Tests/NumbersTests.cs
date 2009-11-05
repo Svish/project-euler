@@ -37,16 +37,15 @@ namespace ProjectEuler.Tests
         }
 
 
-        [TestCase(0UL, 1)]
-        [TestCase(1UL, 1)]
-        [TestCase(11UL, 2)]
-        [TestCase(111UL, 3)]
-        [TestCase(1234567UL, 7)]
-        [TestCase(ulong.MaxValue, 20)]
-        [TestCase(ulong.MinValue, 1)]
-        public void GetNumberOfDigits_Examples_AreCorrect(ulong value, int actualDigits)
+        [TestCase(0UL, Result = 1)]
+        [TestCase(1UL, Result = 1)]
+        [TestCase(11UL, Result = 2)]
+        [TestCase(111UL, Result = 3)]
+        [TestCase(1234567UL, Result = 7)]
+        [TestCase(ulong.MaxValue, Result = 20)]
+        public byte GetNumberOfDigits_Examples_AreCorrect(ulong value)
         {
-            Assert.AreEqual(actualDigits, value.GetNumberOfDigits());
+            return value.GetNumberOfDigits();
         }
 
 

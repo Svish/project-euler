@@ -1,7 +1,7 @@
-using System.Collections;
 using NUnit.Framework;
 using ProjectEuler.Sequences;
 using ProjectEuler.Tests.TestExtensions;
+using System.Collections;
 
 
 namespace ProjectEuler.Tests.Sequences
@@ -12,10 +12,19 @@ namespace ProjectEuler.Tests.Sequences
         [Test]
         public void GetEnumerator_FirstFiveHundredNumbers_AreCorrect()
         {
-            IEnumerable eratosthenes = new ProbablePrimeSequence();
+            var realPrimes = KnownSequences.FirstPrimeNumbers;
 
-            var result = eratosthenes.Take(1200).ToArray();
-            Assert.That(PrimeSequenceTests.First500, Is.SubsetOf(result));
+            var actual = GetProbablePrimeSequence()
+                .Take(realPrimes.Length * 3)    // Just need enough to cover the real primes
+                .ToArray();
+            
+            Assert.That(realPrimes, Is.SubsetOf(actual));
+        }
+
+
+        private static IEnumerable GetProbablePrimeSequence()
+        {
+            return new ProbablePrimeSequence();
         }
     }
 }

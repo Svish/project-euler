@@ -23,7 +23,7 @@
         public Problem014()
             : base(837799)
         {
-            AddSolution(Solution);
+            AddSolution(Solution, "Brute-force");
         }
 
 

@@ -1,4 +1,6 @@
-﻿using ProjectEuler.Sequences;
+﻿using System;
+using ProjectEuler.Sequences;
+using MathNet.Numerics;
 
 
 namespace ProjectEuler.Problems
@@ -12,7 +14,8 @@ namespace ProjectEuler.Problems
         public Problem025()
             : base(4782)
         {
-            AddSolution(BruteForce);
+            AddSolution(BruteForce, "Brute-force");
+            AddSolution(Mathematical, "Calculated");
         }
 
 
@@ -25,6 +28,15 @@ namespace ProjectEuler.Problems
                 n++;
 
             return n;
+        }
+
+
+        public int Mathematical()
+        {
+            const int length = 1000;
+            var digits = (int)Math.Ceiling((length + Math.Log10(5) / 2 - 1) / Math.Log10(Constants.GoldenRatio));
+
+            return digits;
         }
     }
 }

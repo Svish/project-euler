@@ -6,6 +6,9 @@ using MathNet.Numerics;
 
 namespace ProjectEuler.Problems
 {
+    /// <summary>
+    /// What is the first term in the Fibonacci sequence to contain 1000 digits?
+    /// </summary>
     public class Problem025 : ProblemBase<int>
     {
         // http://en.wikipedia.org/wiki/Fibonacci_series
@@ -38,9 +41,9 @@ namespace ProjectEuler.Problems
         private static int Mathematical()
         {
             const int length = 1000;
-            var digits = (int)Math.Ceiling((length + Math.Log10(5) / 2 - 1) / Math.Log10(Constants.GoldenRatio));
+            var n = (int)Math.Ceiling((length + Math.Log10(5) / 2 - 1) / Math.Log10(Constants.GoldenRatio));
 
-            return digits;
+            return n;
         }
     }
 }

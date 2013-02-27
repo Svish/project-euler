@@ -1,4 +1,5 @@
-﻿namespace ProjectEuler.Problems
+﻿using System;
+namespace ProjectEuler.Problems
 {
     /// <summary>
     /// What is the greatest product of four adjacent numbers in any 
@@ -57,25 +58,21 @@
                     if (c < columns - 3)
                     {
                         // Right and "Left"
-                        if (greatest < Grid[r, c] * Grid[r, c + 1] * Grid[r, c + 2] * Grid[r, c + 3])
-                            greatest = Grid[r, c] * Grid[r, c + 1] * Grid[r, c + 2] * Grid[r, c + 3];
+                        greatest = Math.Max(greatest, Grid[r, c] * Grid[r, c + 1] * Grid[r, c + 2] * Grid[r, c + 3]);
                     }
 
                     if (r < rows - 3)
                     {
                         // Down and "Up"
-                        if (greatest < Grid[r, c] * Grid[r + 1, c] * Grid[r + 2, c] * Grid[r + 3, c])
-                            greatest = Grid[r, c] * Grid[r + 1, c] * Grid[r + 2, c] * Grid[r + 3, c];
+                        greatest = Math.Max(greatest, Grid[r, c] * Grid[r + 1, c] * Grid[r + 2, c] * Grid[r + 3, c]);
 
                         // Diagonally, down to the right
                         if (c < columns - 3)
-                            if (greatest < Grid[r, c] * Grid[r + 1, c + 1] * Grid[r + 2, c + 2] * Grid[r + 3, c + 3])
-                                greatest = Grid[r, c] * Grid[r + 1, c + 1] * Grid[r + 2, c + 2] * Grid[r + 3, c + 3];
+                            greatest = Math.Max(greatest, Grid[r, c] * Grid[r + 1, c + 1] * Grid[r + 2, c + 2] * Grid[r + 3, c + 3]);
 
                         // Diagonally, down to the left
                         if (c > 3)
-                            if (greatest < Grid[r, c] * Grid[r + 1, c - 1] * Grid[r + 2, c - 2] * Grid[r + 3, c - 3])
-                                greatest = Grid[r, c] * Grid[r + 1, c - 1] * Grid[r + 2, c - 2] * Grid[r + 3, c - 3];
+                            greatest = Math.Max(greatest, Grid[r, c] * Grid[r + 1, c - 1] * Grid[r + 2, c - 2] * Grid[r + 3, c - 3]);
                     }
                 }
 
